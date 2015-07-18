@@ -9,16 +9,15 @@ LILYPOND=cd $(LILYPOND_DIR) && lilypond --pdf $(PARTITURAS).ly && cp *.pdf ../PD
 PDF=cd $(LATEX) && pdflatex -file-line-error -halt-on-error $(FILE) && cp $(FILE).pdf ../$(FILE).pdf
 PREVIEW=$(VIEWER) $(FILE).pdf &
 
-all: pdf clean
+all: lily pdf
 
 lily:
 	$(LILYPOND)
 
 pdf:
-	$(LILYPOND)
 	$(PDF)
 	$(PDF)
 	$(PREVIEW)
 
 clean:
-	rm -rf $(OUTDIR)/* */*.bak */*.aux */*.toc */*.log */*.gz $(LILYPOND_DIR)/*.pdf $(LATEX)/*.pdf # begin with tab
+	@ rm -rf $(OUTDIR)/* */*.bak */*.aux */*.toc */*.log */*.gz $(LILYPOND_DIR)/*.pdf $(LATEX)/*.pdf
