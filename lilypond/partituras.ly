@@ -5,6 +5,7 @@
 %annotate-spacing = ##t
 head-separation = .8\cm
 top-margin = .8\cm
+right-margin = .2\cm
 page-count = 1
 print-page-number = ##f
 }
