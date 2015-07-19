@@ -8,9 +8,26 @@ top-margin = .8\cm
 right-margin = .2\cm
 page-count = 1
 print-page-number = ##f
+%bookTitleMarkup = \markup {
+%      \fill-line {
+%        \null
+%        \override #`(direction . ,UP) {
+%          \dir-column {
+%            \center-align \fontsize #4 \bold
+%              \fromproperty #'header:title %% User-defined field
+%          }
+%        }
+%        \fill-line {
+%	        \fromproperty #'header:piece
+%	        \null
+%	        \fromproperty #'header:composer
+%        }
+%      }
+%    }
 }
 
 \header{
+piece = \markup {\small "Instrumentos em Bb"} %"Instrumentos em Bb"
 tagline = ""
 }
 
@@ -25,16 +42,14 @@ tagline = ""
 	\header{
 		title = "Bandeira Branca"
 		composer = "Chiquinha Gonzaga"
-		piece = "Instrumentos em Bb"
 	}
 }
 
 \book{
-	\bookOutputName "Loucuralouca"
+	\bookOutputName "aPraca"
 	\header{
-		title = "Louco Melo"
+		title = "A Praça"
 		composer = "Chiquinha Gonzaga"
-		piece = "Instrumentos em Bb"
 	}
 	\include "../Partituras/bandeiraBranca.ily"
 }
