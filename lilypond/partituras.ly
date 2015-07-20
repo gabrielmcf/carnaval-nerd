@@ -17,12 +17,16 @@ piece = \markup { \magnify #.6 { "Instrumentos em Bb" } } %Aparece à esquerda d
 tagline = \markup { \magnify #.5 { "Soprem com amor, meus amores!" } } %Rodapé de todas as partituras
 }
 
+%Definem a transposição
+transpDe = c
+transpPara = c
+
 %Para acrescentar uma nova partitura no songbook crie um novo ambiente \book seguindo este padrão
 \book{ %Cria um novo arquivo
 	\bookOutputName "bandeiraBranca" %nome do arquivo
 	\score{ %Cria nova clave
 		\new Staff \with { \magnifyStaff #.9 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
-			\transpose c c { \include "../Partituras/bandeiraBranca.ily" } %Inclui o arquivo com as notas e define a transposição
+			\transpose \transpDe \transpPara { \include "../Partituras/bandeiraBranca.ily" } %Inclui o arquivo com as notas e define a transposição
 		}	
 	}
 	\header{ %Cabeçalho da partitura, contém nome e autor
@@ -35,11 +39,24 @@ tagline = \markup { \magnify #.5 { "Soprem com amor, meus amores!" } } %Rodapé 
 	\bookOutputName "pastorinhas"
 	\score{
 		\new Staff \with { \magnifyStaff #.7 }{		
-			\transpose c c { \include "../Partituras/pastorinhas.ily" }
+			\transpose \transpDe \transpPara { \include "../Partituras/pastorinhas.ily" }
 		}
 	}
 	\header{
 		title = "As Pastorinhas"
 		composer = "Noel Rosa"
+	}
+}
+
+\book{
+	\bookOutputName "praia"
+	\score{
+		\new Staff \with { \magnifyStaff #.9 }{		
+			\transpose \transpDe \transpPara { \include "../Partituras/praia.ily" }
+		}
+	}
+	\header{
+		title = "Marcha da Praia"
+		composer = "Omar Motta"
 	}
 }

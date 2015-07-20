@@ -37,7 +37,7 @@
   ( b4 ) gis8 a
   \tuplet 3/2 { b4 gis b }
   <<
-  { \tiny r4 fis' e cis a8 }
+  {  \tiny r4 fis' e cis a8 }
   \\
   { a2 ( a ) r4 cis,}
   >>
@@ -96,10 +96,10 @@
         % text line-aligned
         % ==================
         % Move text to the desired position
-        \once \override TextScript.extra-offset = #'( -2 . -1)
-        \once \override TextScript.word-space = #1.5
+        \once \override TextScript.extra-offset = #'( -1.8 . -1)
+        \once \override TextScript.word-space = #1.2
         %| <>^\markup \general-align #Y #2 { \center-column { \line { "ao" \fontsize #-5 \musicglyph #"scripts.segno" } } }
-		<>^\markup { \center-column { } \line { "D.C. ao fim" } }
+		<>^\markup { \center-column { } \line { "D.C. ao Fim" } }
 		\repeat unfold 2 {
 		          s1
 		          \bar ""
