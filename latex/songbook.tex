@@ -2,21 +2,21 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[portuguese]{babel}
-\usepackage[top=1cm,left=.2cm,right=.4cm,bottom=.8cm,footskip=0cm]{geometry}
-\usepackage{titletoc}
-%\usepackage{titlesec}
-\usepackage[toc]{multitoc}
-\usepackage{pdfpages}
-\usepackage{fancyhdr}
-\usepackage[none]{hyphenat}
+\usepackage[top=1cm,left=.2cm,right=.4cm,bottom=.8cm,footskip=0cm]{geometry} %Define margens e distância do rodapé
+\usepackage{titletoc} %Para definir o estilo da lista de conteúdo
+\usepackage[toc]{multitoc} %Para lista de conteúdo com 3 colunas
+\usepackage{pdfpages} %Para incluir pdfs
+\usepackage{fancyhdr} %Para personalizar cabeçalho e rodapé
+\usepackage[none]{hyphenat} %Impedir quebra de palavras no fim da linha
 
+%Define novo estilo de cabeçalho e rodapé
 \fancypagestyle{plain}{%
-  \renewcommand{\headrulewidth}{0pt}
-  \fancyfoot[C]{}
-  \fancyfoot[R]{\Large\textbf{\thepage}}
+  \renewcommand{\headrulewidth}{0pt}%Sem linha de cabeçalho
+  \fancyfoot[C]{} %Sem nada no centro do rodapé
+  \fancyfoot[R]{\Large\textbf{\thepage}} %Número da página grande e em negrito à direita do rodapé
 }
 
-\renewcommand*{\multicolumntoc}{3}
+\renewcommand*{\multicolumntoc}{3} %Define 3 colunas para a lista de conteúdo
 
 %Define estilo dos capítulos no índice
 \titlecontents{chapter}
@@ -36,29 +36,27 @@
 {\hspace*{2em}} %filler
 [] %espaço depois do título
 
-%\fancypagestyle{plain}{%
-%%    \renewcommand{\headrulewidth}{0pt}%
-%%    \fancyhf{}%
-%    \fancyfoot[R]{\thepage}%
-%}
-
 \begin{document}
 
+%Sem numeração nas primeiras páginas
 \pagestyle{empty}
 
+%Cria lista de conteúdo sem cabeçalho
 \begingroup
 \makeatletter
 \@starttoc{toc}
 \makeatother
 \endgroup
 
+%Define estilo das páginas incluídas como PDF
 \includepdfset{pagecommand={\thispagestyle{plain}}}	
 
+%Começa o livro
 \newpage
-\addcontentsline{toc}{chapter}{RANCHOS}
-\addcontentsline{toc}{section}{A praça}
+\addcontentsline{toc}{chapter}{RANCHOS} %Inclui novo capítulo no índice
+\addcontentsline{toc}{section}{A praça} %Inclui nova partitura no índice
 \addcontentsline{toc}{section}{As Pastorinhas}
-\includepdf[pagecommand={\thispagestyle{plain}}]{../PDF/pastorinhas.pdf}
+\includepdf[pagecommand={\thispagestyle{plain}}]{../PDF/pastorinhas.pdf} %Inclui a partitura no songbook
 \addcontentsline{toc}{section}{Até quarta-feira}
 \addcontentsline{toc}{section}{Avenida Iluminada}
 \addcontentsline{toc}{section}{Baile no Municipal}
