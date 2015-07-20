@@ -5,25 +5,10 @@
 %annotate-spacing = ##t
 head-separation = .8\cm
 top-margin = .8\cm
-right-margin = .2\cm
+right-margin = .4\cm
 page-count = 1
 print-page-number = ##f
-%bookTitleMarkup = \markup {
-%      \fill-line {
-%        \null
-%        \override #`(direction . ,UP) {
-%          \dir-column {
-%            \center-align \fontsize #4 \bold
-%              \fromproperty #'header:title %% User-defined field
-%          }
-%        }
-%        \fill-line {
-%	        \fromproperty #'header:piece
-%	        \null
-%	        \fromproperty #'header:composer
-%        }
-%      }
-%    }
+indent = #0
 }
 
 \header{
@@ -46,10 +31,15 @@ tagline = ""
 }
 
 \book{
-	\bookOutputName "aPraca"
+	\bookOutputName "pastorinhas"
 	\header{
-		title = "A Praça"
-		composer = "Chiquinha Gonzaga"
+		title = "As Pastorinhas"
+		composer = "Noel Rosa"
 	}
-	\include "../Partituras/bandeiraBranca.ily"
+	\score{
+		\transpose c c { \include "../Partituras/pastorinhas.ily" }
+		\layout{
+		#(layout-set-staff-size 12)
+		}
+	}
 }

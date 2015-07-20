@@ -5,8 +5,7 @@
   \key c \major
   \time 2/4
 
-  \partial 4 
-  a4^\markup { \italic Intro }
+  \partial 4 a4^\markup { \italic Intro }
   b c 
   e d8 [ f ] 
   ( f2 ) 
