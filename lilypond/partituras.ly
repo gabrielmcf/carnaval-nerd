@@ -1,4 +1,5 @@
-\version "2.18.2"
+%\version "2.18.2"
+\version "2.19.23"
 
 \paper{
 #(set-paper-size "a6landscape")
@@ -19,9 +20,11 @@ tagline = ""
 \book{
 	\bookOutputName "bandeiraBranca"
 	\score{
-		\transpose c c { \include "../Partituras/bandeiraBranca.ily" }
+		\new Staff \with { \magnifyStaff #.9 }{		
+			\transpose c c { \include "../Partituras/bandeiraBranca.ily" }
+		}	
 		\layout{
-		#(layout-set-staff-size 19)
+%		#(layout-set-staff-size 19)
 		}
 	}
 	\header{
@@ -37,9 +40,11 @@ tagline = ""
 		composer = "Noel Rosa"
 	}
 	\score{
-		\transpose c c { \include "../Partituras/pastorinhas.ily" }
-		\layout{
-		#(layout-set-staff-size 12)
+		\new Staff \with { \magnifyStaff #.7 }{		
+			\transpose c c { \include "../Partituras/pastorinhas.ily" }
 		}
+%		\layout{
+%		#(layout-set-staff-size 12)
+%		}
 	}
 }
