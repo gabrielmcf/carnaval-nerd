@@ -21,13 +21,42 @@ tagline = \markup { \magnify #.5 { "Faça amor, seja amor!" } } %Rodapé de toda
 transpDe = c
 transpPara = c
 
+%{
 %Para acrescentar uma nova partitura no songbook crie um novo ambiente \book seguindo este padrão
 \book{ %Cria um novo arquivo
 	\bookOutputName "bandeiraBranca" %nome do arquivo
 	\score{ %Cria nova clave
 		\new Staff \with { \magnifyStaff #.9 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
 			\transpose \transpDe \transpPara { \include "../Partituras/bandeiraBranca.ily" } %Inclui o arquivo com as notas e define a transposição
-		}	
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Bandeira Branca"
+		composer = "Chiquinha Gonzaga"
+	}
+}
+%}
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "aPraca" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.8 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/aPraca.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "A Praça"
+		composer = "Carlos Imperial"
+	}
+}
+
+%Para acrescentar uma nova partitura no songbook crie um novo ambiente \book seguindo este padrão
+\book{ %Cria um novo arquivo
+	\bookOutputName "bandeiraBranca" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.9 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/bandeiraBranca.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
 	}
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Bandeira Branca"
@@ -38,7 +67,7 @@ transpPara = c
 \book{
 	\bookOutputName "pastorinhas"
 	\score{
-		\new Staff \with { \magnifyStaff #.7 }{		
+		\new Staff \with { \magnifyStaff #.7 }{
 			\transpose \transpDe \transpPara { \include "../Partituras/pastorinhas.ily" }
 		}
 	}
@@ -51,7 +80,7 @@ transpPara = c
 \book{
 	\bookOutputName "praia"
 	\score{
-		\new Staff \with { \magnifyStaff #.9 }{		
+		\new Staff \with { \magnifyStaff #.9 }{
 			\transpose \transpDe \transpPara { \include "../Partituras/praia.ily" }
 		}
 	}
@@ -64,7 +93,7 @@ transpPara = c
 \book{
 	\bookOutputName "carinhoso"
 	\score{
-		\new Staff \with { \magnifyStaff #.9 }{		
+		\new Staff \with { \magnifyStaff #.9 }{
 			\transpose \transpDe \transpPara { \include "../Partituras/carinhoso.ily" }
 		}
 	}

@@ -49,12 +49,13 @@
 \endgroup
 
 %Define estilo das páginas incluídas como PDF
-\includepdfset{pagecommand={\thispagestyle{plain}}}	
+\includepdfset{pagecommand={\thispagestyle{plain}}}
 
 %Começa o livro
 \newpage
 \addcontentsline{toc}{chapter}{RANCHOS} %Inclui novo capítulo no índice
-%\addcontentsline{toc}{section}{A praça} %Inclui nova partitura no índice
+\addcontentsline{toc}{section}{A Praça} %Inclui nova partitura no índice
+\includepdf{../PDF/aPraca.pdf}
 \addcontentsline{toc}{section}{As Pastorinhas}
 \includepdf{../PDF/pastorinhas.pdf} %Inclui a partitura no songbook
 %\addcontentsline{toc}{section}{Até quarta-feira}

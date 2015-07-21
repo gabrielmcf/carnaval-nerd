@@ -23,5 +23,8 @@ pdf:
 	$(PDF)
 	$(PREVIEW)
 
+add:
+	git add songbook.pdf PDF/*.pdf Partituras/*.ily latex/*.tex lilypond/*.ly
+
 clean:
 	@ rm -rf $(OUTDIR)/* */*.bak */*.aux */*.toc */*.log */*.gz $(LILYPOND_DIR)/*.pdf $(LATEX)/*.pdf
