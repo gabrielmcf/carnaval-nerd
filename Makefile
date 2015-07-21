@@ -5,12 +5,12 @@ LATEX=latex
 LILYPOND_DIR=lilypond
 OUTDIR=out
 VIEWER=atril
-LILYPOND=cd $(LILYPOND_DIR) && lilypond --pdf $(PARTITURAS).ly && cp *.pdf ../PDF
-LILYPOND19=cd $(LILYPOND_DIR) && ~/bin/lilypond --pdf $(PARTITURAS).ly && cp *.pdf ../PDF
+LILYPOND=cd $(LILYPOND_DIR) && lilypond -dno-point-and-click --pdf $(PARTITURAS).ly && cp *.pdf ../PDF
+LILYPOND19=cd $(LILYPOND_DIR) && ~/bin/lilypond -dno-point-and-click --pdf $(PARTITURAS).ly && cp *.pdf ../PDF
 PDF=cd $(LATEX) && pdflatex -file-line-error -halt-on-error $(FILE) && cp $(FILE).pdf ../$(FILE).pdf
 PREVIEW=$(VIEWER) $(FILE).pdf &
 
-all: lily pdf
+all: lily19 pdf
 
 lily:
 	$(LILYPOND)

@@ -13,8 +13,8 @@ indent = #0 %Remove indentação antes da clave, ganha um pouco de espaço e ali
 }
 
 \header{
-piece = \markup { \magnify #.6 { "Instrumentos em Bb" } } %Aparece à esquerda de todas as partituras
-tagline = \markup { \magnify #.5 { "Soprem com amor, meus amores!" } } %Rodapé de todas as partituras
+piece = \markup { \bold \magnify #1 { "Bb" } } %Aparece à esquerda de todas as partituras
+tagline = \markup { \magnify #.5 { "Faça amor, seja amor!" } } %Rodapé de todas as partituras
 }
 
 %Definem a transposição
@@ -58,5 +58,18 @@ transpPara = c
 	\header{
 		title = "Marcha da Praia"
 		composer = "Omar Motta"
+	}
+}
+
+\book{
+	\bookOutputName "carinhoso"
+	\score{
+		\new Staff \with { \magnifyStaff #.9 }{		
+			\transpose \transpDe \transpPara { \include "../Partituras/carinhoso.ily" }
+		}
+	}
+	\header{
+		title = "Carinhoso"
+		composer = "Pixinguinha"
 	}
 }
