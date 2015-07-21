@@ -93,12 +93,64 @@ transpPara = c
 \book{
 	\bookOutputName "carinhoso"
 	\score{
-		\new Staff \with { \magnifyStaff #.9 }{
+		\new Staff \with { \magnifyStaff #.8 }{
 			\transpose \transpDe \transpPara { \include "../Partituras/carinhoso.ily" }
 		}
 	}
 	\header{
 		title = "Carinhoso"
 		composer = "Pixinguinha"
+	}
+}
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "jingleTarifaZero" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #1 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/jingleTarifaZero.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Jingle Tarifa Zero"
+		composer = "Tião Duá"
+	}
+}
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "mamboGameleira" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.9 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/mamboGameleira.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Mambo da Gameleira"
+		composer = "Original de Barbosa da Silva e Eloide Warthon"
+	}
+}
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "mamaNaVaca" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.9 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/mamaNaVaca.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Mamá na Vaca"
+		composer = "Vaquinha da Leopoldina"
+	}
+}
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "luzTieta" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.9 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/luzTieta.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "A Luz de Tieta"
+		composer = "Caetano Veloso"
 	}
 }

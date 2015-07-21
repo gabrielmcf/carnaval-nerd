@@ -20,7 +20,7 @@
 
 %Define estilo dos capítulos no índice
 \titlecontents{chapter}
-[.2cm] %espaço à esquerda
+[.3cm] %espaço à esquerda
 {\addvspace{.8em}\bf\contentsmargin{0em}} %formatação do título e espaço vertical antes
 {} %formato de número
 {} %formato de número sem título
@@ -35,6 +35,21 @@
 {\textbf{\contentspage}\hspace*{1em}} %formato de número sem título
 {\hspace*{2em}} %filler
 [] %espaço depois do título
+
+% \makeatletter
+% \def\l@chapter#1#2{%
+% \pagebreak[3]
+% \vskip .75em plus 1pt \@tempdima 1em
+% \begingroup
+%   \parindent \z@ \rightskip \@pnumwidth
+%   \parfillskip -\@pnumwidth
+%   \advance\leftskip\@tempdima
+%   \hskip 0em
+%   \leavevmode \bfseries \MakeUppercase{#1}
+%   \par
+% \endgroup
+% }
+% \makeatother
 
 \begin{document}
 
@@ -73,52 +88,55 @@
 
 
 \addcontentsline{toc}{chapter}{CRÁSSICAS}
-%\addcontentsline{toc}{section}{A patroa me contou...}
-%\addcontentsline{toc}{section}{Alalaô}
-%\addcontentsline{toc}{section}{Aurora}
-%\addcontentsline{toc}{section}{Balança o saco}
-%\addcontentsline{toc}{section}{Balancê}
-%\addcontentsline{toc}{section}{Bota a Camisinha}
-%\addcontentsline{toc}{section}{Cabeleira do Zezé}
-%\addcontentsline{toc}{section}{Cachaça}
-%\addcontentsline{toc}{section}{Caiu na rede é peixe}
-%\addcontentsline{toc}{section}{Can Can no Carnaval}
-%\addcontentsline{toc}{section}{Chiquita Bacana}
-%\addcontentsline{toc}{section}{Cidade Maravilhosa}
-%\addcontentsline{toc}{section}{Coração de Jacaré}
-%\addcontentsline{toc}{section}{Daqui não saio}
-%\addcontentsline{toc}{section}{Está chegando a hora}
-%\addcontentsline{toc}{section}{Índio quer apito}
-%\addcontentsline{toc}{section}{Jardineira}
-%\addcontentsline{toc}{section}{Mamãe eu quero}
-%\addcontentsline{toc}{section}{Marcha da Cueca}
-%\addcontentsline{toc}{section}{Marcha do Cordão...}
-%\addcontentsline{toc}{section}{Marcha do Remador}
-%\addcontentsline{toc}{section}{Maria Sapatão}
-%\addcontentsline{toc}{section}{Me dá um dinheiro aí}
-%\addcontentsline{toc}{section}{Mulata iê iê iê}
-%\addcontentsline{toc}{section}{Pegando Fogo}
-%\addcontentsline{toc}{section}{Pescador}
-%\addcontentsline{toc}{section}{Pierrô Apaixonado}
-%\addcontentsline{toc}{section}{Quem sabe sabe}
-%\addcontentsline{toc}{section}{Ressaca}
-%\addcontentsline{toc}{section}{Saca-Rolha}
-%\addcontentsline{toc}{section}{Sassaricando}
-%\addcontentsline{toc}{section}{Taí}
-%\addcontentsline{toc}{section}{Tem nêgo bêbo aí}
-%\addcontentsline{toc}{section}{Tomara que chova}
-%\addcontentsline{toc}{section}{Turma do Funil}
-%\addcontentsline{toc}{section}{Vai com jeito}
-%\addcontentsline{toc}{section}{Zé Pereira}
+\addcontentsline{toc}{section}{A patroa me contou...}
+\addcontentsline{toc}{section}{Alalaô}
+\addcontentsline{toc}{section}{Aurora}
+\addcontentsline{toc}{section}{Balança o saco}
+\addcontentsline{toc}{section}{Balancê}
+\addcontentsline{toc}{section}{Bota a Camisinha}
+\addcontentsline{toc}{section}{Cabeleira do Zezé}
+\addcontentsline{toc}{section}{Cachaça}
+\addcontentsline{toc}{section}{Caiu na rede é peixe}
+\addcontentsline{toc}{section}{Can Can no Carnaval}
+\addcontentsline{toc}{section}{Chiquita Bacana}
+\addcontentsline{toc}{section}{Cidade Maravilhosa}
+\addcontentsline{toc}{section}{Coração de Jacaré}
+\addcontentsline{toc}{section}{Daqui não saio}
+\addcontentsline{toc}{section}{Está chegando a hora}
+\addcontentsline{toc}{section}{Índio quer apito}
+\addcontentsline{toc}{section}{Jardineira}
+\addcontentsline{toc}{section}{Mamãe eu quero}
+\addcontentsline{toc}{section}{Marcha da Cueca}
+\addcontentsline{toc}{section}{Marcha do Cordão...}
+\addcontentsline{toc}{section}{Marcha do Remador}
+\addcontentsline{toc}{section}{Maria Sapatão}
+\addcontentsline{toc}{section}{Me dá um dinheiro aí}
+\addcontentsline{toc}{section}{Mulata iê iê iê}
+\addcontentsline{toc}{section}{Pegando Fogo}
+\addcontentsline{toc}{section}{Pescador}
+\addcontentsline{toc}{section}{Pierrô Apaixonado}
+\addcontentsline{toc}{section}{Quem sabe sabe}
+\addcontentsline{toc}{section}{Ressaca}
+\addcontentsline{toc}{section}{Saca-Rolha}
+\addcontentsline{toc}{section}{Sassaricando}
+\addcontentsline{toc}{section}{Taí}
+\addcontentsline{toc}{section}{Tem nêgo bêbo aí}
+\addcontentsline{toc}{section}{Tomara que chova}
+\addcontentsline{toc}{section}{Turma do Funil}
+\addcontentsline{toc}{section}{Vai com jeito}
+\addcontentsline{toc}{section}{Zé Pereira}
 
 \addcontentsline{toc}{chapter}{BELLOT}
-%\addcontentsline{toc}{section}{Jingle Tarifa Zero}
-%\addcontentsline{toc}{section}{Mambo da Gameleira}
+\addcontentsline{toc}{section}{Jingle Tarifa Zero}
+\includepdf{../PDF/jingleTarifaZero.pdf}
+\addcontentsline{toc}{section}{Mambo da Gameleira}
+\includepdf{../PDF/mamboGameleira.pdf}
 %\addcontentsline{toc}{section}{Pula Catraca\\Bibi Fomfom}
 %\addcontentsline{toc}{section}{Coxinha da Madrasta}
 %\addcontentsline{toc}{section}{Então Brilha}
 %\addcontentsline{toc}{section}{Filhos de Chachá}
-%\addcontentsline{toc}{section}{Mamá na Vaca}
+\addcontentsline{toc}{section}{Mamá na Vaca}
+\includepdf{../PDF/mamaNaVaca.pdf}
 %\addcontentsline{toc}{section}{Marcha da Alcova}
 \addcontentsline{toc}{section}{Marcha da Praia}
 \includepdf{../PDF/praia.pdf} %Inclui a partitura no songbook
@@ -127,7 +145,8 @@
 
 \addcontentsline{toc}{chapter}{AXÉ}
 %\addcontentsline{toc}{section}{A dança do bum bum}
-%\addcontentsline{toc}{section}{A luz de Tieta}
+\addcontentsline{toc}{section}{A luz de Tieta}
+\includepdf{../PDF/luzTieta.pdf}
 %\addcontentsline{toc}{section}{Água Mineral}
 %\addcontentsline{toc}{section}{Alô Paixão}
 %\addcontentsline{toc}{section}{Baianidade Nagô}
@@ -234,7 +253,6 @@
 %\addcontentsline{toc}{section}{Pedro de Lara}
 %\addcontentsline{toc}{section}{Superfantástico}
 %\addcontentsline{toc}{section}{Uma brasileira}
-\addcontentsline{toc}{section}{Aflorou}
-\includepdf{../PDF/bandeiraBranca.pdf}
+%\addcontentsline{toc}{section}{Aflorou}
 
 \end{document}
