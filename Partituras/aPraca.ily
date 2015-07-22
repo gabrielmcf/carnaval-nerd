@@ -61,10 +61,10 @@ ees ees d c
 \override Glissando #'style = #'zigzag
 { \tiny r4 g8 bes \cadenzaOn c4 \glissando \hideNotes f,4 \unHideNotes \cadenzaOff }
 \\
-{ bes2 r4 r8 f }
+{ bes2 r4 r8 f^\markup { \sans \bold "D.S." } }
 >>
 \bar "|."
-\cadenzaOn
+%{\cadenzaOn
     \stopStaff
 
   \repeat unfold 1 {
@@ -84,5 +84,5 @@ ees ees d c
             \bar ""
           }
       % Resume bar count and show staff lines again
- \cadenzaOff
+ \cadenzaOff%}
 }

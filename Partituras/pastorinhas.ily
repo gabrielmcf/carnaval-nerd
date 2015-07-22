@@ -7,7 +7,7 @@
   \time 2/4
 
   \partial 4 e,4
-  c' gis \bar ".|:" 
+  c' gis \bar ".|:"
   b2
   a
   r4 e
@@ -70,9 +70,9 @@
   e
   \tuplet 3/2 { cis4 a cis }
   \tuplet 3/2 { b gis b }
-  a_\markup{Fim} 
+  a_\markup{Fim}
   <<
-  {\tiny r8 f' e d c b a r8 } 
+  {\tiny r8 f' e d c b a r8 }
   \\
   {}
   >>
@@ -82,28 +82,7 @@
   <<
   { r2 a8 r4.}
   \\
-  { \tiny f4 ( e8 cis ) a8 r4. }
+  { \tiny f4 ( e8 cis ) a8 r4.^\markup { \bold "D.C. ao Fim" } }
   >>
   \bar "|."
-  \cadenzaOn
-      \stopStaff
-
-	  \repeat unfold 1 {
-	          s1
-	          \bar ""
-	        }
-
-        % text line-aligned
-        % ==================
-        % Move text to the desired position
-        \once \override TextScript.extra-offset = #'( -1.8 . -1)
-        \once \override TextScript.word-space = #1.2
-        %| <>^\markup \general-align #Y #2 { \center-column { \line { "ao" \fontsize #-5 \musicglyph #"scripts.segno" } } }
-		<>^\markup { \center-column { } \line { "D.C. ao Fim" } }
-		\repeat unfold 2 {
-		          s1
-		          \bar ""
-		        }
-        % Resume bar count and show staff lines again
-   \cadenzaOff
 }

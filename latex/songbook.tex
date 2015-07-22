@@ -8,6 +8,14 @@
 \usepackage{pdfpages} %Para incluir pdfs
 \usepackage{fancyhdr} %Para personalizar cabeçalho e rodapé
 \usepackage[none]{hyphenat} %Impedir quebra de palavras no fim da linha
+% \usepackage[sfdefault,condensed]{cabin}
+% \usepackage[T1]{fontenc}
+\usepackage[sfdefault]{roboto}  %% Option 'sfdefault' only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+\pdfminorversion=5
+\pdfcompresslevel=9
+\pdfobjcompresslevel=2
 
 %Define novo estilo de cabeçalho e rodapé
 \fancypagestyle{plain}{%
@@ -32,7 +40,7 @@
 [.3cm] %espaço à esquerda
 {\sc\small\contentsmargin{-4em}} %formatação do título e espaço vertical antes
 {} %formato de número
-{\textbf{\contentspage}\hspace*{1em}} %formato de número sem título
+{\textbf{\contentspage}\hspace*{3em}} %formato de número sem título
 {\hspace*{2em}} %filler
 [] %espaço depois do título
 
@@ -84,13 +92,14 @@
 %\addcontentsline{toc}{section}{Eu quero é botar...}
 %\addcontentsline{toc}{section}{Máscara Negra}
 %\addcontentsline{toc}{section}{Noite dos mascarados}
-%\addcontentsline{toc}{section}{O Abre Alas}
-
+\addcontentsline{toc}{section}{Ô Abre Alas}
+\includepdf{../PDF/abreAlas.pdf}
 
 \addcontentsline{toc}{chapter}{CRÁSSICAS}
 \addcontentsline{toc}{section}{A patroa me contou...}
 \addcontentsline{toc}{section}{Alalaô}
 \addcontentsline{toc}{section}{Aurora}
+\includepdf{../PDF/aurora.pdf}
 \addcontentsline{toc}{section}{Balança o saco}
 \addcontentsline{toc}{section}{Balancê}
 \addcontentsline{toc}{section}{Bota a Camisinha}
@@ -168,12 +177,15 @@
 %\addcontentsline{toc}{section}{Requebra }
 %\addcontentsline{toc}{section}{Sexy Iemanjá}
 
-\addcontentsline{toc}{chapter}{A LAMBÁSTICA\\ ARROCHERIA FORROBÓTICA FREVALÍSTICA}
-%\addcontentsline{toc}{section}{Anunciação}
+\addcontentsline{toc}{chapter}{A LAMBÁSTICA \\ARROCHERIA \\FORROBÓTICA \\FREVALÍSTICA}
+\addcontentsline{toc}{section}{Anunciação}
+\includepdf{../PDF/luzTieta.pdf}
 %\addcontentsline{toc}{section}{La belle du jour}
 %\addcontentsline{toc}{section}{Girassol}
-%\addcontentsline{toc}{section}{Morena Tropicana}
-%\addcontentsline{toc}{section}{Acorda Maria Bonita}
+\addcontentsline{toc}{section}{Morena Tropicana}
+\includepdf{../PDF/luzTieta.pdf}
+\addcontentsline{toc}{section}{Acorda Maria Bonita}
+\includepdf{../PDF/luzTieta.pdf}
 %\addcontentsline{toc}{section}{Que nem Jiló}
 %\addcontentsline{toc}{section}{Fui Fiel}
 %\addcontentsline{toc}{section}{Porque Homem não chora}
@@ -188,8 +200,10 @@
 %\addcontentsline{toc}{section}{Vassourinhas}
 
 \addcontentsline{toc}{chapter}{SAMBENHAS E PRIMOS TORTOS}
-%\addcontentsline{toc}{section}{Saudades da Amélia}
-%\addcontentsline{toc}{section}{Cilada}
+\addcontentsline{toc}{section}{Saudades da Amélia}
+\includepdf{../PDF/luzTieta.pdf}
+\addcontentsline{toc}{section}{Cilada}
+\includepdf{../PDF/luzTieta.pdf}
 %\addcontentsline{toc}{section}{Ê baiana}
 %\addcontentsline{toc}{section}{Kid Cavaquinho}
 %\addcontentsline{toc}{section}{Recordar é viver}
@@ -198,7 +212,8 @@
 %\addcontentsline{toc}{section}{Maracangalha}
 
 \addcontentsline{toc}{chapter}{FUNK}
-%\addcontentsline{toc}{section}{Beijinho no ombro}
+\addcontentsline{toc}{section}{Beijinho no ombro}
+\includepdf{../PDF/luzTieta.pdf}
 %\addcontentsline{toc}{section}{Dom Dom Dom}
 %\addcontentsline{toc}{section}{Glamurosa}
 %\addcontentsline{toc}{section}{Morto muito louco}
@@ -207,9 +222,11 @@
 %\addcontentsline{toc}{section}{Show das poderosas}
 
 \addcontentsline{toc}{chapter}{AFRODITE SE QUISER}
-%\addcontentsline{toc}{section}{Besame Mucho}
+\addcontentsline{toc}{section}{Besame Mucho}
+\includepdf{../PDF/luzTieta.pdf}
 %\addcontentsline{toc}{section}{Emoções}
-%\addcontentsline{toc}{section}{Quizas}
+\addcontentsline{toc}{section}{Quizas}
+\includepdf{../PDF/luzTieta.pdf}
 %\addcontentsline{toc}{section}{Garçon}
 
 \addcontentsline{toc}{chapter}{SLOW MOTION}
@@ -217,9 +234,11 @@
 %\addcontentsline{toc}{section}{Carroça de Fogo}
 
 \addcontentsline{toc}{chapter}{CHAMA O SÍNDICO}
-%\addcontentsline{toc}{section}{Acenda o farol}
+\addcontentsline{toc}{section}{Acenda o farol}
+\includepdf{../PDF/luzTieta.pdf}
 %\addcontentsline{toc}{section}{Azul da cor do mar}
-%\addcontentsline{toc}{section}{Batata frita}
+\addcontentsline{toc}{section}{Batata frita}
+\includepdf{../PDF/luzTieta.pdf}
 %\addcontentsline{toc}{section}{Bom senso}
 %\addcontentsline{toc}{section}{Canário do Reino}
 %\addcontentsline{toc}{section}{Chove Chuva}
@@ -229,7 +248,8 @@
 %\addcontentsline{toc}{section}{Fio Maravilha}
 %\addcontentsline{toc}{section}{Gostava tanto de você}
 %\addcontentsline{toc}{section}{Guiné Bissau...}
-%\addcontentsline{toc}{section}{Imunização Racional...}
+\addcontentsline{toc}{section}{Imunização Racional...}
+\includepdf{../PDF/luzTieta.pdf}
 %\addcontentsline{toc}{section}{Ive Brussel}
 %\addcontentsline{toc}{section}{Márcio Leonardo e Telmo}
 %\addcontentsline{toc}{section}{Menina mulher}
@@ -253,6 +273,7 @@
 %\addcontentsline{toc}{section}{Pedro de Lara}
 %\addcontentsline{toc}{section}{Superfantástico}
 %\addcontentsline{toc}{section}{Uma brasileira}
-%\addcontentsline{toc}{section}{Aflorou}
+\addcontentsline{toc}{section}{Aflorou}
+\includepdf{../PDF/luzTieta.pdf}
 
 \end{document}

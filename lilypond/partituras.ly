@@ -1,4 +1,5 @@
 %\version "2.18.2"
+
 \version "2.19.23"
 
 \paper{
@@ -7,13 +8,19 @@
 head-separation = .8\cm %Separação do título
 top-margin = .8\cm %Margem superior
 right-margin = .4\cm %Margem direita
+bottom-margin = .4\cm
 page-count = 1 %Limita cada partitura a 1 página (facilita na hora de dimensionar a clave)
 print-page-number = ##f %Não imprime número da página, isso fica por conta do LaTeX
 indent = #0 %Remove indentação antes da clave, ganha um pouco de espaço e alinha as linhas
+#(define fonts
+	(make-pango-font-tree "Nimbus Sans"
+												"Nimbus Sans"
+												"Nimbus Sans"
+												(/ staff-height pt 20)))
 }
 
 \header{
-piece = \markup { \bold \magnify #1 { "Bb" } } %Aparece à esquerda de todas as partituras
+piece = \markup { \bold \magnify #1 { Bb }  } %Aparece à esquerda de todas as partituras
 tagline = \markup { \magnify #.5 { "Faça amor, seja amor!" } } %Rodapé de todas as partituras
 }
 
@@ -74,6 +81,32 @@ transpPara = c
 	\header{
 		title = "As Pastorinhas"
 		composer = "Noel Rosa"
+	}
+}
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "aurora" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.9 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/aurora.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Aurora"
+		composer = "Mário Lago e Roberto Roberti"
+	}
+}
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "abreAlas" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #1.3 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/abreAlas.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Ô Abre Alas"
+		composer = "Chiquinha Gonzaga"
 	}
 }
 

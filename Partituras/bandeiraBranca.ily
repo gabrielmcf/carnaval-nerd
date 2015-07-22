@@ -1,4 +1,3 @@
-%\version "2.18.2"
 \version "2.19.23"
 
 \relative c'' {
@@ -7,23 +6,21 @@
   \time 2/4
 
   \partial 4 a4^\markup { \italic Intro }
-  b c 
-  e d8 [ f ] 
-  ( f2 ) 
-  d4 c8 [ e ] 
-  \( e \) e, [ a e ] 
+  b c
+  e d8 [ f ]
+  ( f2 )
+  d4 c8 [ e ]
+  \( e \) e, [ a e ]
   f f b a
   \appoggiatura b ( a ) gis fis gis
   a r8 a4^\markup { \italic Voz }
   b c
   \mark \markup { \fontsize #-4 \musicglyph #"scripts.segno" }
-  
-%  \repeat volta 2 {
 \set Score.repeatCommands = #'(start-repeat)
 	  b4 a8 e ( e2 )
 	  r4 a4
 	  <<
-	  { b4 c d2 ( d ) } 
+	  { b4 c d2 ( d ) }
 	  \\
 	  { \tiny g,4 ges f2 ( f ) }
 	  >>
@@ -35,18 +32,11 @@
 	  b gis8 a
 	  ( a2 )
 	  ( a ) |
-%  }
-%  \alternative{ 
-%	  { 
-
 \set Score.repeatCommands = #'((volta "1"))
 		  r4 a
-		  b c 
+		  b c
 \set Score.repeatCommands = #'((volta #f))
 		\bar ":|."
-%\set Score.repeatCommands = #'(end-repeat)
-%	  }
-%	  { 
 \set Score.repeatCommands = #'((volta "2"))
 		  r4. c8
 		  c c d des
@@ -66,29 +56,6 @@
 		  ( a2 )
 		  ( a4 ) r4 \bar "||"
 		  r4 a
-		  b c \bar "|."	
-%	  }  
-%  }
-  \cadenzaOn
-      \stopStaff
-
-	  \repeat unfold 1 {
-	          s1
-	          \bar ""
-	        }
-
-        % text line-aligned
-        % ==================
-        % Move text to the desired position
-        \once \override TextScript.extra-offset = #'( -4 . -2.1)
-        \once \override TextScript.word-space = #1.5
-        %| <>^\markup \general-align #Y #2 { \center-column { \line { "ao" \fontsize #-5 \musicglyph #"scripts.segno" } } }
-		<>^\markup { \center-column { } \line { "ao" \fontsize #-1 \musicglyph #"scripts.segno" } }
-		\repeat unfold 2 {
-		          s1
-		          \bar ""
-		        }
-        % Resume bar count and show staff lines again
-   \cadenzaOff
-%  \bar "|."
+		  b c^\markup { \bold "D.S." }
+      \bar "|."
 }
