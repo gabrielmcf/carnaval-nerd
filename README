@@ -1,5 +1,5 @@
 Esse projeto tem como objetivo juntar num livro lindo e fácilmente expansível as partituras do carnaval.
 
-Para gerar as partituras está sendo usado o Lilypond versão 2.18.2 (http://www.lilypond.org/).
+Para gerar as partituras está sendo usado o Lilypond versão 2.19.23 (http://www.lilypond.org/).
 
 O LaTeX faz as partes da montagem do livro e indexação das páginas.

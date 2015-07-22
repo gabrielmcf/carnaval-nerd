@@ -98,6 +98,19 @@ transpPara = c
 }
 
 \book{ %Cria um novo arquivo
+	\bookOutputName "marchaDaCueca" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #1 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/marchaDaCueca.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Marcha da Cueca"
+		composer = "Mendes/Prestes/Sardinha"
+	}
+}
+
+\book{ %Cria um novo arquivo
 	\bookOutputName "abreAlas" %nome do arquivo
 	\score{ %Cria nova clave
 		\new Staff \with { \magnifyStaff #1.3 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
