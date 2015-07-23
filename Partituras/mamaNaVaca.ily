@@ -6,7 +6,7 @@
   \time 4/4
 
   \partial 4.
-  cis8^\markup { \bold "A" } cis b
+  cis8^\markup { \box \bold "A" } cis b
   b ais ( ais4 ) r8 cis cis b
   b ais ( ais4 ) r8 cis cis b
   ais4 b cis ais8 b
@@ -16,7 +16,7 @@
   b4 ais gis ais
   b1
   \bar ":|."
-  \tuplet 3/2 { b2^\markup { \bold "B" } b4 } \tuplet 3/2 { b cis dis }
+  \tuplet 3/2 { b2^\markup { \box \bold "B" } b4 } \tuplet 3/2 { b cis dis }
   \tuplet 3/2 { ais ais ais } ais2
   \tuplet 3/2 { gis4 gis ais } \tuplet 3/2 { b ais gis }
   fis1

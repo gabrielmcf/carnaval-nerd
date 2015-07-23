@@ -6,7 +6,7 @@
   \time 2/4
 
 \bar ".|:"
-r8^\markup { \bold  "A" } e, g a
+r8^\markup { \box \bold  "A" } e, g a
 b4. b8
 b b a g
 b2
@@ -23,7 +23,7 @@ b4 c8 b
 fis4 g8 e
 ( e2 )
 \bar ":|."
-r8^\markup { \bold  "B" } g fis e
+r8^\markup { \box \bold  "B" } g fis e
 d8. d8. d'8
 ( d ) c b a
 c8. b16 ( b8 ) r8

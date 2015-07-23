@@ -6,7 +6,7 @@
   \key c \major
   \time 2/4
 
-  \partial 4 e,4
+  \partial 4 e,4^\markup { \box \bold "A" }
   c' gis \bar ".|:"
   b2
   a
@@ -37,9 +37,9 @@
   ( b4 ) gis8 a
   \tuplet 3/2 { b4 gis b }
   <<
-  {  \tiny r4 fis' e cis a8 }
+  {  \teeny r4 fis' e cis a8 }
   \\
-  { a2 ( a ) r4 cis,}
+  { a2 ( a ) r4 cis,^\markup { \box \bold "B" } }
   >>
   e cis' \bar "||"
   \key a \major
@@ -70,9 +70,9 @@
   e
   \tuplet 3/2 { cis4 a cis }
   \tuplet 3/2 { b gis b }
-  a_\markup{Fim}
+  a^\markup{ \bold "Fim" }
   <<
-  {\tiny r8 f' e d c b a r8 }
+  {\teeny r8 f' e d c b a r8 }
   \\
   {}
   >>
@@ -82,7 +82,7 @@
   <<
   { r2 a8 r4.}
   \\
-  { \tiny f4 ( e8 cis ) a8^\markup { \bold "D.C. ao Fim" } r4. }
+  { \teeny f4 ( e8 cis ) a8^\markup { \bold "D.C. ao Fim" } r4. }
   >>
   \bar "|."
 }

@@ -1,17 +1,5 @@
 \version "2.19.23"
 
-startParenthesis = {
-  \once \override ParenthesesItem.stencils = #(lambda (grob)
-        (let ((par-list (parentheses-item::calc-parenthesis-stencils grob)))
-          (list (car par-list) point-stencil )))
-}
-
-endParenthesis = {
-  \once \override ParenthesesItem.stencils = #(lambda (grob)
-        (let ((par-list (parentheses-item::calc-parenthesis-stencils grob)))
-          (list point-stencil (cadr par-list))))
-} 
-
 \paper{
 #(set-paper-size "a6landscape") %Define tamanho do papel
 %annotate-spacing = ##t %Anota os espaços na partitura
@@ -118,6 +106,21 @@ transpPara = c
 }
 
 \book{ %Cria um novo arquivo
+	\bookOutputName "cachaca" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.8 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/cachaca.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Cachaça"
+		composer = \markup { \tiny "Lúcio de Castro / Heber Lobato / Marinósio Filho / Mirabeau" }
+	}
+}
+
+
+
+\book{ %Cria um novo arquivo
 	\bookOutputName "aurora" %nome do arquivo
 	\score{ %Cria nova clave
 		\new Staff \with { \magnifyStaff #.9 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
@@ -133,13 +136,26 @@ transpPara = c
 \book{ %Cria um novo arquivo
 	\bookOutputName "marchaDaCueca" %nome do arquivo
 	\score{ %Cria nova clave
-		\new Staff \with { \magnifyStaff #1 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+		\new Staff \with { \magnifyStaff #1.1 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
 			\transpose \transpDe \transpPara { \include "../Partituras/marchaDaCueca.ily" } %Inclui o arquivo com as notas e define a transposição
 		}
 	}
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Marcha da Cueca"
-		composer = "Mendes/Prestes/Sardinha"
+		composer = "Mendes / Prestes / Sardinha"
+	}
+}
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "allahlao" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.7 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/allahlao.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Allah-La Ô"
+		composer = "Haroldo Lobo e Antônio Nássara"
 	}
 }
 

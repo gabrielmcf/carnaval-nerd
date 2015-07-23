@@ -6,7 +6,7 @@
   \time 2/4
 
   \bar ".|:"
-  e8^\markup { \bold "A" } e e d~
+  e8^\markup { \box \bold "A" } e e d~
   d c d c~
   c2
   r2
@@ -25,7 +25,7 @@
   { \teeny b4 a g }
   >>
   \bar ":|."
-  \tuplet 3/2 { c4^\markup { \bold "B" } c c }
+  \tuplet 3/2 { c4^\markup { \box \bold "B" } c c }
   \tuplet 3/2 { c d e }
   b2
   gis

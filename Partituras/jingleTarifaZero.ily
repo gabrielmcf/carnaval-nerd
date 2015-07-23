@@ -5,7 +5,6 @@
   \key a \major
   \time 2/4
 
-  \bar ".|:"
   a2
   b
   cis

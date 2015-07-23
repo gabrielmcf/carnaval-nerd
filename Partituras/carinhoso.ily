@@ -6,7 +6,7 @@
   \key f \major
   \time 2/4
 
-r4^\markup { \bold "A" } \tuplet 3/2 { b8 a g }
+r4^\markup { \box \bold "A" } \tuplet 3/2 { b8 a g }
 b2
 ( b4 ) \tuplet 3/2 { b8 a g }
 b2
@@ -23,11 +23,11 @@ b2
 ( b4 ) \tuplet 3/2 { a8 g a }
 g2
 \bar ":|."
-r4^\markup { \bold "B" } fis'16 g g e
+r4^\markup { \box \bold "B" } fis'16 g g e
 d e d cis b cis b a
 g a b cis d cis b cis
 b8 fis ( fis4 )
-r4 b16 cis d e 
+r4 b16 cis d e
 fis e d b a b cis d
 e fis e b d cis b a
 d4 ees

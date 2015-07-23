@@ -22,7 +22,7 @@
 	  <<
 	  { b4 c d2 ( d ) }
 	  \\
-	  { \tiny g,4 ges f2 ( f ) }
+	  { \teeny g,4 ges f2 ( f ) }
 	  >>
 	  r4 d'
 	  c b

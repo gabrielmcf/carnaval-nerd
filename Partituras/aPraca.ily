@@ -26,7 +26,7 @@ d2
 >>
 \bar ".|:"
 \mark \markup { \fontsize #-4 \musicglyph #"scripts.segno" }
-f f f' f
+f^\markup { \box \bold "A" } f f' f
 ees d c b
 d c c b
 c4 r8 f,
@@ -42,7 +42,7 @@ c c ees ees
 d c bes a
 bes2
 \bar ":|."
-r8 f g f
+r8^\markup { \box \bold "B" } f g f
 d'4 d
 r8 f, g f
 ees'4 ees
@@ -59,30 +59,9 @@ f4 c8 d
 ees ees d c
 <<
 \override Glissando #'style = #'zigzag
-{ \tiny r4 g8 bes \cadenzaOn c4 \glissando \hideNotes f,4 \unHideNotes \cadenzaOff }
+{ \teeny r4 g8 bes \cadenzaOn c4 \glissando \hideNotes f,4 \unHideNotes \cadenzaOff }
 \\
 { bes2 r4 r8 f^\markup { \sans \bold "D.S." } }
 >>
 \bar "|."
-%{\cadenzaOn
-    \stopStaff
-
-  \repeat unfold 1 {
-          s1
-          \bar ""
-        }
-
-      % text line-aligned
-      % ==================
-      % Move text to the desired position
-      \once \override TextScript.extra-offset = #'( -3 . -2)
-      \once \override TextScript.word-space = #1.5
-      %| <>^\markup \general-align #Y #2 { \center-column { \line { "ao" \fontsize #-5 \musicglyph #"scripts.segno" } } }
-  <>^\markup { \center-column { } \line { "ao" \fontsize #-1 \musicglyph #"scripts.segno" } }
-  \repeat unfold 2 {
-            s1
-            \bar ""
-          }
-      % Resume bar count and show staff lines again
- \cadenzaOff%}
 }

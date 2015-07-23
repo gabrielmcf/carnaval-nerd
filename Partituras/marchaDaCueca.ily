@@ -6,7 +6,7 @@
   \time 2/4
 
   \partial 4
-  e8 d ( <> )
+  e8^\markup { \box \bold "A" } d ( <> )
   \mark \markup { \fontsize #-4 \musicglyph #"scripts.segno" }
   \set Score.repeatCommands = #'(start-repeat)
   d a4.
@@ -25,7 +25,7 @@
   r8 e e d
   \set Score.repeatCommands = #'((volta #f))
   \bar ".|:"
-  f e4.
+  f^\markup { \box \bold "B" } e4.
   r8 d d c
   e c4.
   r8 c b a

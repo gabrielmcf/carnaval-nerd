@@ -6,7 +6,7 @@
   \time 2/4
 
   \bar ".|:"
-  r4 r16 a a gis
+  r4^\markup { \box \bold "A" } r16 a a gis
   fis fis fis gis a gis fis8
   ( fis4 ) r16 cis'16 cis cis
   b b b cis d cis b8
@@ -16,7 +16,7 @@
   cis cis cis cis b b a gis
   fis4 r4
   \bar ".|:"
-  fis'8 fis16 cis fis8 fis
+  fis'8^\markup { \box \bold "B" } fis16 cis fis8 fis
   ( fis2 )
   e8 e16 b e8 e
   ( e2 )
