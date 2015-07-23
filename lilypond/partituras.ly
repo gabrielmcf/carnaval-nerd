@@ -1,6 +1,16 @@
-%\version "2.18.2"
-
 \version "2.19.23"
+
+startParenthesis = {
+  \once \override ParenthesesItem.stencils = #(lambda (grob)
+        (let ((par-list (parentheses-item::calc-parenthesis-stencils grob)))
+          (list (car par-list) point-stencil )))
+}
+
+endParenthesis = {
+  \once \override ParenthesesItem.stencils = #(lambda (grob)
+        (let ((par-list (parentheses-item::calc-parenthesis-stencils grob)))
+          (list point-stencil (cadr par-list))))
+} 
 
 \paper{
 #(set-paper-size "a6landscape") %Define tamanho do papel
@@ -12,11 +22,8 @@ bottom-margin = .4\cm
 page-count = 1 %Limita cada partitura a 1 página (facilita na hora de dimensionar a clave)
 print-page-number = ##f %Não imprime número da página, isso fica por conta do LaTeX
 indent = #0 %Remove indentação antes da clave, ganha um pouco de espaço e alinha as linhas
-#(define fonts
-	(make-pango-font-tree "Nimbus Sans"
-												"Nimbus Sans"
-												"Nimbus Sans"
-												(/ staff-height pt 20)))
+#(define fonts (make-pango-font-tree "Nimbus Sans" "Nimbus Sans" "Nimbus Sans" (/ staff-height pt 20)))
+
 }
 
 \header{
@@ -94,6 +101,19 @@ transpPara = c
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Balancê"
 		composer = "João de Barro e Alberto Ribeiro"
+	}
+}
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "cabeleiraDoZeze" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.9 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/cabeleiraDoZeze.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Cabeleira do Zezé"
+		composer = "Roberto Faissal e João Roberto Kelly"
 	}
 }
 
