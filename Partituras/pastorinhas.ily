@@ -82,7 +82,7 @@
   <<
   { r2 a8 r4.}
   \\
-  { \tiny f4 ( e8 cis ) a8 r4.^\markup { \bold "D.C. ao Fim" } }
+  { \tiny f4 ( e8 cis ) a8^\markup { \bold "D.C. ao Fim" } r4. }
   >>
   \bar "|."
 }

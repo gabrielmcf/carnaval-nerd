@@ -85,6 +85,19 @@ transpPara = c
 }
 
 \book{ %Cria um novo arquivo
+	\bookOutputName "balance" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.9 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/balance.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Balancê"
+		composer = "João de Barro e Alberto Ribeiro"
+	}
+}
+
+\book{ %Cria um novo arquivo
 	\bookOutputName "aurora" %nome do arquivo
 	\score{ %Cria nova clave
 		\new Staff \with { \magnifyStaff #.9 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
