@@ -62,7 +62,7 @@ transpPara = c
 	}
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Bandeira Branca"
-		composer = "Chiquinha Gonzaga"
+		composer = "Max Nunes e Laércio Alves"
 	}
 }
 
@@ -211,6 +211,19 @@ transpPara = c
 	}
 }
 
+\book{ %Cria um novo arquivo
+	\bookOutputName "remador" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #1 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/remador.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Marcha do Remador"
+		composer = "Antônio Almeida e Oldemar Magalhães"
+	}
+}
+
 \book{
 	\bookOutputName "praia"
 	\score{
@@ -221,6 +234,19 @@ transpPara = c
 	\header{
 		title = "Marcha da Praia"
 		composer = "Omar Motta"
+	}
+}
+
+\book{
+	\bookOutputName "manjericao"
+	\score{
+		\new Staff \with { \magnifyStaff #1 }{
+			\transpose \transpDe \transpPara { \include "../Partituras/manjericao.ily" }
+		}
+	}
+	\header{
+		title = "Marcha do Manjericão"
+		composer = "Bloco do Manjericão"
 	}
 }
 
@@ -316,6 +342,19 @@ transpPara = c
 }
 
 \book{ %Cria um novo arquivo
+	\bookOutputName "carroca" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #1 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/carroca.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Carroça de Fogo"
+		composer = "Vangelis"
+	}
+}
+
+\book{ %Cria um novo arquivo
 	\bookOutputName "paTroPi" %nome do arquivo
 	\score{ %Cria nova clave
 		\new Staff \with { \magnifyStaff #.8 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
@@ -325,6 +364,19 @@ transpPara = c
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "País Tropical"
 		composer = "Jorge Ben"
+	}
+}
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "besame" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #1 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/besame.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Besame Mucho"
+		composer = "Consuelo Velásquez"
 	}
 }
 

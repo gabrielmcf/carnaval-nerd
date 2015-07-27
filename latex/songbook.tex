@@ -38,6 +38,8 @@
 
 \renewcommand*{\multicolumntoc}{3} %Define 3 colunas para a lista de conteúdo
 
+\newcommand{\capa}[1]{\includepdf[pagecommand={\thispagestyle{empty}}]{../capas/#1.pdf}}
+
 %Define estilo dos capítulos no índice
 \titlecontents{chapter}
 [.3cm] %espaço à esquerda
@@ -76,6 +78,8 @@
 %Sem numeração nas primeiras páginas
 \pagestyle{empty}
 
+\capa{capa}
+
 %Cria lista de conteúdo sem cabeçalho
 \begingroup
 \makeatletter
@@ -89,6 +93,7 @@
 %Começa o livro
 \newpage
 \addcontentsline{toc}{chapter}{RANCHOS} %Inclui novo capítulo no índice
+\capa{rancho}
 \addcontentsline{toc}{section}{A Praça} %Inclui nova partitura no índice
 \includepdf{../PDF/aPraca.pdf}
 \addcontentsline{toc}{section}{As Pastorinhas}
@@ -108,6 +113,7 @@
 \includepdf{../PDF/abreAlas.pdf}
 
 \addcontentsline{toc}{chapter}{CRÁSSICAS}
+\capa{crassicas}
 % \addcontentsline{toc}{section}{A patroa me contou...}
 \addcontentsline{toc}{section}{Allah-La Ô}
 \includepdf{../PDF/allahlao.pdf}
@@ -138,7 +144,8 @@
 \addcontentsline{toc}{section}{Marcha da Cueca}
 \includepdf{../PDF/marchaDaCueca.pdf}
 % \addcontentsline{toc}{section}{Marcha do Cordão...}
-% \addcontentsline{toc}{section}{Marcha do Remador}
+\addcontentsline{toc}{section}{Marcha do Remador}
+\includepdf{../PDF/remador.pdf}
 % \addcontentsline{toc}{section}{Maria Sapatão}
 % \addcontentsline{toc}{section}{Me dá um dinheiro aí}
 % \addcontentsline{toc}{section}{Mulata iê iê iê}
@@ -157,6 +164,7 @@
 % \addcontentsline{toc}{section}{Zé Pereira}
 
 \addcontentsline{toc}{chapter}{BELLOT}
+\capa{bellot}
 \addcontentsline{toc}{section}{Jingle Tarifa Zero}
 \includepdf{../PDF/jingleTarifaZero.pdf}
 \addcontentsline{toc}{section}{Mambo da Gameleira}
@@ -170,10 +178,12 @@
 %\addcontentsline{toc}{section}{Marcha da Alcova}
 \addcontentsline{toc}{section}{Marcha da Praia}
 \includepdf{../PDF/praia.pdf} %Inclui a partitura no songbook
-%\addcontentsline{toc}{section}{Marcha do Manjericão}
+\addcontentsline{toc}{section}{Marcha do Manjericão}
+\includepdf{../PDF/manjericao.pdf}
 %\addcontentsline{toc}{section}{O Baile do Pó Royal}
 
 \addcontentsline{toc}{chapter}{AXÉ}
+\capa{axe}
 %\addcontentsline{toc}{section}{A dança do bum bum}
 \addcontentsline{toc}{section}{A Luz de Tieta}
 \includepdf{../PDF/luzTieta.pdf}
@@ -200,6 +210,7 @@
 
 %\addcontentsline{toc}{chapter}{A LAMBÁSTICA \\ARROCHERIA \\FORROBÓTICA \\FREVALÍSTICA}
 \addcontentsline{toc}{chapter}{A LAMBÁSTICA ARROCHERIA \\FORROBÓTICA FREVALÍSTICA}
+\capa{lambastica}
 %\addcontentsline{toc}{section}{Anunciação}
 %\addcontentsline{toc}{section}{La belle du jour}
 %\addcontentsline{toc}{section}{Girassol}
@@ -219,6 +230,7 @@
 %\addcontentsline{toc}{section}{Vassourinhas}
 
 \addcontentsline{toc}{chapter}{SAMBENHAS E PRIMOS TORTOS}
+\capa{samba}
 %\addcontentsline{toc}{section}{Saudades da Amélia}
 %\addcontentsline{toc}{section}{Cilada}
 %\addcontentsline{toc}{section}{Ê baiana}
@@ -229,6 +241,7 @@
 %\addcontentsline{toc}{section}{Maracangalha}
 
 \addcontentsline{toc}{chapter}{FUNK}
+\capa{funk}
 %\addcontentsline{toc}{section}{Beijinho no ombro}
 %\addcontentsline{toc}{section}{Dom Dom Dom}
 %\addcontentsline{toc}{section}{Glamurosa}
@@ -238,17 +251,22 @@
 %\addcontentsline{toc}{section}{Show das poderosas}
 
 \addcontentsline{toc}{chapter}{AFRODITE SE QUISER}
-%\addcontentsline{toc}{section}{Besame Mucho}
+\capa{afrodite}
+\addcontentsline{toc}{section}{Besame Mucho}
+\includepdf{../PDF/besame.pdf}
 %\addcontentsline{toc}{section}{Emoções}
 %\addcontentsline{toc}{section}{Quizas}
 %\addcontentsline{toc}{section}{Garçon}
 
 \addcontentsline{toc}{chapter}{SLOW MOTION}
+\capa{slow}
 \addcontentsline{toc}{section}{Assim falou zaratrusta}
 \includepdf{../PDF/odisseia.pdf}
-%\addcontentsline{toc}{section}{Carroça de Fogo}
+\addcontentsline{toc}{section}{Carroça de Fogo}
+\includepdf{../PDF/carroca.pdf}
 
 \addcontentsline{toc}{chapter}{CHAMA O SÍNDICO}
+\capa{sindico}
 %\addcontentsline{toc}{section}{Acenda o farol}
 %\addcontentsline{toc}{section}{Azul da cor do mar}
 %\addcontentsline{toc}{section}{Batata frita}
@@ -279,6 +297,7 @@
 %\addcontentsline{toc}{section}{Zumbi}
 
 \addcontentsline{toc}{chapter}{OUTRAS}
+\capa{outras}
 \addcontentsline{toc}{section}{A barata diz que tem}
 \includepdf{../PDF/barata.pdf}
 %\addcontentsline{toc}{section}{Cant buy me love}
