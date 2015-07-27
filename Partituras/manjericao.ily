@@ -5,7 +5,7 @@
      \key g \major
      \time 2/4
 
-        r8 g8 a8 b8 | % 2
+        r8 ^\markup { \box \bold "A" } g8 a8 b8 | % 2
         c4 b4 | % 3
         a4 g4 | % 4
         e2 | % 5
@@ -23,7 +23,7 @@
         c2 ~
         \bar ":|.|:"
         \mark \markup { \fontsize #-4 \musicglyph #"scripts.segno" }
-        c2 | % 18
+        c2 ^\markup { \box \bold "B" } | % 18
         a4 b4  | % 19
         c4 b8 g8 ~ |
         g2 | % 21
@@ -32,14 +32,14 @@
         e8 d8 c8 b8 | % 24
         c2
         \bar ":|."
-    s2 | % 26
-    c8. c16 r8 b8 | % 27
+
+    c8.^\markup { \box \bold "C" } c16 r8 b8 | % 27
     a8 g8 e8 g8 | % 28
     c8. c16 r8 b8 | % 29
     a8 g8 e8 g8 |
     c8. c16 r8 b8 | % 31
     a8 g8 e8 g8 | % 32
-    g2 s2 | % 34
+    g2 | % 34
     d'8. d16 r8 c8 | % 35
     b8 a8 g8 a8 | % 36
     d8. d16 r8 c8 | % 37
