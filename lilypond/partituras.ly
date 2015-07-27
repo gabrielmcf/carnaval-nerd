@@ -316,6 +316,19 @@ transpPara = c
 }
 
 \book{ %Cria um novo arquivo
+	\bookOutputName "turmaFunil" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.8 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/turmaFunil.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Turma do Funil"
+		composer = "Mirabeau/Milton de Oliveira/Urgel de Castro"
+	}
+}
+
+\book{ %Cria um novo arquivo
 	\bookOutputName "sassaricando" %nome do arquivo
 	\score{ %Cria nova clave
 		\new Staff \with { \magnifyStaff #.9 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras

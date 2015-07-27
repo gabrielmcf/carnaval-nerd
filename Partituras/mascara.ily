@@ -11,8 +11,8 @@ r4 d4 ^\markup{ \italic {Intro} } \bar "||"
 g4 a8 bes8 ~ | % 4
 bes8 d8 g8 ges8
 f8 r8 d8 ^\markup { \italic "Voz" } c8
-\bar ".|:" \mark \markup { \fontsize #-4 \musicglyph #"scripts.segno" }
-
+\bar ".|:"
+\mark \markup { \fontsize #-4 \musicglyph #"scripts.segno" }
     d8 f,8 r8 f8 ~ | % 7
     f8 es'8 d8 c8 | % 8
     d8 f,4. ~ | % 9
