@@ -290,6 +290,19 @@ transpPara = c
 }
 
 \book{
+	\bookOutputName "poRoyal"
+	\score{
+		\new Staff \with { \magnifyStaff #.65 }{
+			\transpose \transpDe \transpPara { \include "../Partituras/poRoyal.ily" }
+		}
+	}
+	\header{
+		title = "O Baile do Pó Royal"
+		composer = \markup { \tiny "Alfredo Jackson, Joilson Cachaça e Thiago Dibeto" }
+	}
+}
+
+\book{
 	\bookOutputName "carinhoso"
 	\score{
 		\new Staff \with { \magnifyStaff #.8 }{

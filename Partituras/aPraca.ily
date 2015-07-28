@@ -20,7 +20,7 @@ d2
 \set Score.repeatCommands = #'((volta "2"))
 <<
 \override Glissando #'style = #'zigzag
-{ r4 g,8 bes \cadenzaOn c4 \glissando \hideNotes f,4 \unHideNotes \cadenzaOff}
+{ r4 g,8 bes \cadenzaOn c4 \glissando \hideNotes f,4 \unHideNotes \cadenzaOff }
 \\
 { bes2 \set Score.repeatCommands = #'((volta #f)) r4 r8 f8^\markup { \italic "Voz" } }
 >>
