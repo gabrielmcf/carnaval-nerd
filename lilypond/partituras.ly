@@ -238,6 +238,33 @@ transpPara = c
 }
 
 \book{ %Cria um novo arquivo
+	\bookOutputName "pierroApaixonado" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #1 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/pierroApaixonado.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Pierrô Apaixonado"
+		composer = "Noel Rosa e Heitor dos Prazeres"
+	}
+}
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "quemSabeSabe" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.8 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/quemSabeSabe.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Quem Sabe, Sabe"
+		composer = "Joel de Almeida e Carvalhinho"
+	}
+}
+
+
+\book{ %Cria um novo arquivo
 	\bookOutputName "vaiComJeito" %nome do arquivo
 	\score{ %Cria nova clave
 		\new Staff \with { \magnifyStaff #1 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
@@ -331,7 +358,7 @@ transpPara = c
 \book{ %Cria um novo arquivo
 	\bookOutputName "turmaFunil" %nome do arquivo
 	\score{ %Cria nova clave
-		\new Staff \with { \magnifyStaff #.8 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+		\new Staff \with { \magnifyStaff #.75 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
 			\transpose \transpDe \transpPara { \include "../Partituras/turmaFunil.ily" } %Inclui o arquivo com as notas e define a transposição
 		}
 	}

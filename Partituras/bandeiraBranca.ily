@@ -12,7 +12,7 @@
   d4 c8 [ e ]
   \( e \) e, [ a e ]
   f f b a
-  \appoggiatura b ( a ) gis fis gis
+  \appoggiatura b ( a ) gis fis gis \break
   a r8 a4^\markup { \italic Voz }
   b c
   \mark \markup { \fontsize #-4 \musicglyph #"scripts.segno" }

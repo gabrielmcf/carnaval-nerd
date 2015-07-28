@@ -22,10 +22,10 @@
   \set Score.repeatCommands = #'((volta "2"))
   g, g a b
   e8. c16~ c4
-  r8 e e d
   \set Score.repeatCommands = #'((volta #f))
+  r8 e^\markup { \box \bold "B" } e d
   \bar ".|:"
-  f^\markup { \box \bold "B" } e4.
+  f e4.
   r8 d d c
   e c4.
   r8 c b a
