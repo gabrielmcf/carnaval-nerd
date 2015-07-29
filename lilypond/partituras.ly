@@ -9,7 +9,7 @@ right-margin = .4\cm %Margem direita
 bottom-margin = .4\cm
 page-count = 1 %Limita cada partitura a 1 página (facilita na hora de dimensionar a clave)
 print-page-number = ##f %Não imprime número da página, isso fica por conta do LaTeX
-indent = #0 %Remove indentação antes da clave, ganha um pouco de espaço e alinha as linhas
+indent = #0 %Remove indentação antes da clave, ganha um pouco de espaço e alinha os sistemas
 #(define fonts (make-pango-font-tree "Nimbus Sans L" "Nimbus Sans L" "Nimbus Sans L" (/ staff-height pt 20)))
 %#(define fonts (make-pango-font-tree "PT Sans Narrow" "PT Sans Narrow" "PT Sans Narrow" (/ staff-height pt 20)))
 }
@@ -23,7 +23,7 @@ tagline = \markup { \magnify #.5 { "Faça amor, seja amor!" } } %Rodapé de toda
 transpDe = c
 transpPara = c
 
-%{
+
 %Para acrescentar uma nova partitura no songbook crie um novo ambiente \book seguindo este padrão
 \book{ %Cria um novo arquivo
 	\bookOutputName "bandeiraBranca" %nome do arquivo
@@ -37,7 +37,7 @@ transpPara = c
 		composer = "Chiquinha Gonzaga"
 	}
 }
-%}
+
 
 \book{ %Cria um novo arquivo
 	\bookOutputName "aPraca" %nome do arquivo
@@ -278,6 +278,19 @@ transpPara = c
 }
 
 \book{ %Cria um novo arquivo
+	\bookOutputName "tai" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #1 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/tai.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Taí"
+		composer = "Joubert de Carvalho"
+	}
+}
+
+\book{ %Cria um novo arquivo
 	\bookOutputName "ze" %nome do arquivo
 	\score{ %Cria nova clave
 		\new Staff \with { \magnifyStaff #.9 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
@@ -430,6 +443,19 @@ transpPara = c
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "A Luz de Tieta"
 		composer = "Caetano Veloso"
+	}
+}
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "belezaRara" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.7 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/belezaRara.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Beleza Rara"
+		composer = "Ed Grandão e Nego John"
 	}
 }
 
