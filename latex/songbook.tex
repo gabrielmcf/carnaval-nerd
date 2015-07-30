@@ -1,14 +1,18 @@
 \documentclass[a6paper,landscape,10pt]{report}
 
 \usepackage[utf8]{inputenc}
+%\usepackage{xltxtra}
 \usepackage[portuguese]{babel}
-\usepackage[top=1cm,left=.2cm,right=.4cm,bottom=.8cm,footskip=0cm]{geometry} %Define margens e distância do rodapé
+\usepackage[top=1cm,left=.4cm,right=.4cm,bottom=.8cm,footskip=0cm]{geometry} %Define margens e distância do rodapé
 \usepackage{titletoc} %Para definir o estilo da lista de conteúdo
 \usepackage[toc]{multitoc} %Para lista de conteúdo com 3 colunas
 \usepackage{pdfpages} %Para incluir pdfs
 \usepackage{fancyhdr} %Para personalizar cabeçalho e rodapé
 \usepackage[none]{hyphenat} %Impedir quebra de palavras no fim da linha
 \usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{afterpage}
+
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -17,10 +21,13 @@
     urlcolor=black
 }
 
+
+
 %Fonte padrão Sans Serif, na verdade só pro índice...
 \usepackage{PTSansNarrow}
 \renewcommand*\familydefault{\sfdefault}
 \usepackage[T1]{fontenc}
+%\usepackage{Intro}
 
 %Define novo estilo de cabeçalho e rodapé
 \fancypagestyle{plain}{%
@@ -31,7 +38,7 @@
 
 \renewcommand*{\multicolumntoc}{3} %Define 3 colunas para a lista de conteúdo
 
-\newcommand{\capa}[1]{\includepdf[pagecommand={\thispagestyle{empty}}]{../capas/#1.pdf}}
+\newcommand{\capa}[1]{\includepdf[pagecommand={\thispagestyle{empty}}]{../../capas/#1.pdf}}
 
 \newcommand{\musica}[1]{\phantomsection\addcontentsline{toc}{section}{#1}}
 \newcommand{\capitulo}[1]{\phantomsection\addcontentsline{toc}{chapter}{#1}}
@@ -59,7 +66,8 @@
 %Sem numeração nas primeiras páginas
 \pagestyle{empty}
 
-\capa{capa}
+%\capa{capa}
+\input{../capas/capa}
 
 %Cria lista de conteúdo sem cabeçalho
 \begingroup
@@ -74,7 +82,7 @@
 %Começa o livro
 \newpage
 \capitulo{RANCHOS} %Inclui novo capítulo no índice
-\capa{rancho}
+\input{../capas/rancho}
 \musica{A Praça} %Inclui nova partitura no índice
 \includepdf{../PDF/aPraca.pdf}
 \musica{As Pastorinhas}
@@ -96,7 +104,7 @@
 \includepdf{../PDF/abreAlas.pdf}
 
 \capitulo{CRÁSSICAS}
-\capa{crassicas}
+\input{../capas/crassicas}
 % \musica{A patroa me contou...}
 \musica{Allah-La Ô}
 \includepdf{../PDF/allahlao.pdf}
@@ -153,7 +161,7 @@
 \includepdf{../PDF/ze.pdf}
 
 \capitulo{BELLOT}
-\capa{bellot}
+\input{../capas/bellot}
 \musica{Jingle Tarifa Zero}
 \includepdf{../PDF/jingleTarifaZero.pdf}
 \musica{Mambo da Gameleira}
@@ -173,7 +181,7 @@
 \includepdf{../PDF/poRoyal.pdf}
 
 \capitulo{AXÉ}
-\capa{axe}
+\input{../capas/axe}
 %\musica{A dança do bum bum}
 \musica{A Luz de Tieta}
 \includepdf{../PDF/luzTieta.pdf}
@@ -200,7 +208,7 @@
 
 %\capitulo{A LAMBÁSTICA \\ARROCHERIA \\FORROBÓTICA \\FREVALÍSTICA}
 \capitulo{A LAMBÁSTICA ARROCHERIA \\FORROBÓTICA FREVALÍSTICA}
-\capa{lambastica}
+\input{../capas/lambastica}
 %\musica{Anunciação}
 %\musica{La belle du jour}
 %\musica{Girassol}
@@ -221,7 +229,7 @@
 %\musica{Vassourinhas}
 
 \capitulo{SAMBENHAS E PRIMOS TORTOS}
-\capa{samba}
+\input{../capas/samba}
 %\musica{Saudades da Amélia}
 %\musica{Cilada}
 %\musica{Ê baiana}
@@ -232,7 +240,7 @@
 %\musica{Maracangalha}
 
 \capitulo{FUNK}
-\capa{funk}
+\input{../capas/funk}
 %\musica{Beijinho no ombro}
 %\musica{Dom Dom Dom}
 %\musica{Glamurosa}
@@ -242,7 +250,7 @@
 %\musica{Show das poderosas}
 
 \capitulo{AFRODITE SE QUISER}
-\capa{afrodite}
+\input{../capas/afrodite}
 \musica{Besame Mucho}
 \includepdf{../PDF/besame.pdf}
 %\musica{Emoções}
@@ -250,14 +258,14 @@
 %\musica{Garçon}
 
 \capitulo{SLOW MOTION}
-\capa{slow}
+\input{../capas/slow}
 \musica{Assim falou zaratrusta}
 \includepdf{../PDF/odisseia.pdf}
 \musica{Carroça de Fogo}
 \includepdf{../PDF/carroca.pdf}
 
 \capitulo{CHAMA O SÍNDICO}
-\capa{sindico}
+\input{../capas/sindico}
 %\musica{Acenda o farol}
 %\musica{Azul da cor do mar}
 %\musica{Batata frita}
@@ -288,7 +296,7 @@
 %\musica{Zumbi}
 
 \capitulo{OUTRAS}
-\capa{outras}
+\input{../capas/outras}
 \musica{A barata diz que tem}
 \includepdf{../PDF/barata.pdf}
 %\musica{Cant buy me love}

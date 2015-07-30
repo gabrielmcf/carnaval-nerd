@@ -5,6 +5,7 @@
 %annotate-spacing = ##t %Anota os espaços na partitura
 head-separation = .8\cm %Separação do título
 top-margin = .8\cm %Margem superior
+%left-margin = .4\cm
 right-margin = .4\cm %Margem direita
 bottom-margin = .4\cm
 page-count = 1 %Limita cada partitura a 1 página (facilita na hora de dimensionar a clave)

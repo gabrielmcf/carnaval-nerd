@@ -21,7 +21,7 @@ pdf:
 	$(PREVIEW)
 
 add:
-	git add songbook.pdf Partituras/*.ily latex/*.tex lilypond/*.ly Makefile README capas/*.pdf
+	git add songbook.pdf Partituras/*.ily latex/*.tex lilypond/*.ly Makefile README capas/*.tex
 
 clean:
 	@ rm -rf $(OUTDIR)/* */*.bak */*.aux */*.toc */*.log */*.gz $(LILYPOND_DIR)/*.pdf $(LATEX)/*.pdf
