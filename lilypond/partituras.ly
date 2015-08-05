@@ -12,7 +12,6 @@ page-count = 1 %Limita cada partitura a 1 página (facilita na hora de dimension
 print-page-number = ##f %Não imprime número da página, isso fica por conta do LaTeX
 indent = #0 %Remove indentação antes da clave, ganha um pouco de espaço e alinha os sistemas
 #(define fonts (make-pango-font-tree "Nimbus Sans L" "Nimbus Sans L" "Nimbus Sans L" (/ staff-height pt 20)))
-%#(define fonts (make-pango-font-tree "PT Sans Narrow" "PT Sans Narrow" "PT Sans Narrow" (/ staff-height pt 20)))
 }
 
 \header{
@@ -155,6 +154,19 @@ transpPara = c
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Índio Quer Apito"
 		composer = "Haroldo Lobo e Milton de Oliveira"
+	}
+}
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "mamaeEuQuero" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.8 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/mamaeEuQuero.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Mamãe eu Quero"
+		composer = "Jararaca e Vicente Paiva"
 	}
 }
 

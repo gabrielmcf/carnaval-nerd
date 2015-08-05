@@ -9,16 +9,22 @@ VIEWER=atril
 LILYPOND19=cd $(LILYPOND_DIR) && lilypond -s -dno-point-and-click --pdf $(PARTITURAS).ly && mv *.pdf ../PDF
 PDF=cd $(LATEX) && pdflatex -file-line-error -halt-on-error $(FILE) && cp $(FILE).pdf ../$(FILE).pdf
 PREVIEW=$(VIEWER) $(FILE).pdf &
+BEEP=beep -r 3
+
 
 all: lily pdf
 
 lily:
 	$(LILYPOND19)
+	$(BEEP)
 
 pdf:
 	$(PDF)
 	$(PDF)
 	$(PREVIEW)
+
+beepa:
+	$(BEEP)
 
 add:
 	git add songbook.pdf Partituras/*.ily latex/*.tex lilypond/*.ly Makefile README capas/*.tex

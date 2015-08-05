@@ -1,5 +1,7 @@
 \version "2.19.23"
 
+%\override Score.VoltaBracket #'font-name = #"sans"
+
 \relative c'' {
   \clef treble
   \key bes \major
