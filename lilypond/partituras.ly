@@ -23,6 +23,18 @@ tagline = \markup { \magnify #.5 { "Faça amor, seja amor!" } } %Rodapé de toda
 transpDe = c
 transpPara = c
 
+\book{ %Cria um novo arquivo
+	\bookOutputName "mariaSapatao" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #1 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/mariaSapatao.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Maria Sapatão"
+		composer = \markup { \teeny "João Roberto Kelly / Dom Carlos / Abelardo Barbosa \"Chacrinha\" / Leleco Barbosa" }
+	}
+}
 
 %Para acrescentar uma nova partitura no songbook crie um novo ambiente \book seguindo este padrão
 \book{ %Cria um novo arquivo
@@ -183,7 +195,18 @@ transpPara = c
 	}
 }
 
-
+\book{ %Cria um novo arquivo
+	\bookOutputName "mariaSapatao" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.9 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/mariaSapatao.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Maria Sapatão"
+		composer = \markup { \fontsize #-4 "João Roberto Kelly / Dom Carlos / Abelardo Barbosa \"Chacrinha\" / Leleco Barbosa" }
+	}
+}
 
 \book{ %Cria um novo arquivo
 	\bookOutputName "aurora" %nome do arquivo
