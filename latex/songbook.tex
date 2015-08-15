@@ -9,7 +9,7 @@
 \usepackage{pdfpages} %Para incluir pdfs
 \usepackage{fancyhdr} %Para personalizar cabeçalho e rodapé
 \usepackage[none]{hyphenat} %Impedir quebra de palavras no fim da linha
-\usepackage[pdftex]{hyperref}
+\usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{afterpage}
 
@@ -19,12 +19,10 @@
     filecolor=black,
     linkcolor=black,
     urlcolor=black
-    pdfauthor={Gabriel Fonseca},
-    pdfsubject={carnaval},
-    pdftitle={Songbook do Carnaval},
-    pdfcreator={Gabriel Fonseca},
-    pdfproducer={Gabriel Fonseca}
 }
+
+
+
 %Fonte padrão Sans Serif, na verdade só pro índice...
 \usepackage{PTSansNarrow}
 \renewcommand*\familydefault{\sfdefault}
@@ -39,6 +37,8 @@
 }
 
 \renewcommand*{\multicolumntoc}{3} %Define 3 colunas para a lista de conteúdo
+
+\newcommand{\capa}[1]{\includepdf[pagecommand={\thispagestyle{empty}}]{../../capas/#1.pdf}}
 
 \newcommand{\musica}[1]{\phantomsection\addcontentsline{toc}{section}{#1}}
 \newcommand{\capitulo}[1]{\phantomsection\addcontentsline{toc}{chapter}{#1}}
@@ -141,8 +141,7 @@
 % \musica{Marcha do Cordão...}
 \musica{Marcha do Remador}
 \includepdf{../PDF/remador.pdf}
-\musica{Maria Sapatão}
-\includepdf{../PDF/mariaSapatao.pdf}
+% \musica{Maria Sapatão}
 % \musica{Me dá um dinheiro aí}
 % \musica{Mulata iê iê iê}
 % \musica{Pegando Fogo}

@@ -21,7 +21,7 @@
   \set Score.repeatCommands = #'((volta #f))
   \set Score.repeatCommands = #'((volta "2"))
   g, g a b
-  e8. c16~ c4
+  d8. c16~ c4
   \set Score.repeatCommands = #'((volta #f))
   r8 e^\markup { \box \bold "B" } e d
   \bar ".|:"
