@@ -8,7 +8,7 @@ top-margin = .8\cm %Margem superior
 %left-margin = .4\cm
 right-margin = .4\cm %Margem direita
 bottom-margin = .4\cm
-page-count = 1 %Limita cada partitura a 1 página (facilita na hora de dimensionar a clave)
+page-count = 1 %Limita cada partitura a 1 página (facilita na hora de dimensionar a cla ve)
 print-page-number = ##f %Não imprime número da página, isso fica por conta do LaTeX
 indent = #0 %Remove indentação antes da clave, ganha um pouco de espaço e alinha os sistemas
 #(define fonts (make-pango-font-tree "Nimbus Sans L" "Nimbus Sans L" "Nimbus Sans L" (/ staff-height pt 20)))
@@ -21,7 +21,90 @@ tagline = \markup { \magnify #.5 { "Faça amor, seja amor!" } } %Rodapé de toda
 
 %Definem a transposição
 transpDe = c
-transpPara = c
+transpPara = g % Para instrumentos em Eb
+%transpPara = g % Para instrumentos em C
+%transpPara = c % Para instrumentos em Bb
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "quiNemJilo" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.8 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/quiNemJilo.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Qui Nem Jiló"
+		composer = "Luiz Gonzaga e Humberto Teixeira"
+	}
+}
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "anunciacao" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #1 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/anunciacao.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Anunciação"
+		composer = "Alceu Valença"
+	}
+}
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "temNegoBebo" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.9 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/temNegoBebo.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Tem Nego Bebo Ai"
+		composer = "Mirabeau e Airton Amorim"
+	}
+}
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "sacaRolha" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.95 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/sacaRolha.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Saca-Rolha"
+		composer = "Zé da Zilda, Zilda do Zé e Waldir Machado"
+	}
+}
+
+
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "ressaca" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #1 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/ressaca.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Ressaca"
+		composer = "Zé da Zilda e Zilda do Zé"
+	}
+}
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "mulataieieie" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #1 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/mulataieieie.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Mulata iê, ie, iê"
+		composer = "João Roberto Kelly"
+	}
+}
+
 
 \book{ %Cria um novo arquivo
 	\bookOutputName "mariaSapatao" %nome do arquivo

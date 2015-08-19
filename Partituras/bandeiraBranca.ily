@@ -16,7 +16,7 @@
   a r8 a4^\markup { \italic Voz }
   b c
   \mark \markup { \fontsize #-4 \musicglyph #"scripts.segno" }
-  \set Score.repeatCommands = #'(start-repeat)
+  \bar ".|:"
   b4 a8 e ( e2 )
   r4 a4
   <<
