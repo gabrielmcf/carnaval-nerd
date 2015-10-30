@@ -15,15 +15,72 @@ indent = #0 %Remove indentação antes da clave, ganha um pouco de espaço e ali
 }
 
 \header{
-piece = \markup { \bold \magnify #1 { Eb }  } %Aparece à esquerda de todas as partituras
+piece = \markup { \bold \magnify #1 { Bb }  } %Aparece à esquerda de todas as partituras
 tagline = \markup { \magnify #.5 { "Faça amor, seja amor!" } } %Rodapé de todas as partituras
 }
 
 %Definem a transposição
 transpDe = c
-transpPara = g % Para instrumentos em Eb
+%transpPara = g % Para instrumentos em Eb
 %transpPara = g % Para instrumentos em C
-%transpPara = c % Para instrumentos em Bb
+transpPara = c % Para instrumentos em Bb
+
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "requebra" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.58 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/requebra.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Requebra"
+		composer = "Pierre Onassis e Nego"
+	}
+}
+
+
+%{
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "noiteMascarados" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #1 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/noiteMascarados.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Noite dos Mascarados"
+		composer = "Chico Buarque"
+	}
+}
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "meDaDinheiroAi" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.9 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/meDaDinheiroAi.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Me Dá Um Dinheiro Ai"
+		composer = \markup { \tiny "Ivan Ferreira / Homero Ferreira / Glauco Ferreira" }
+	}
+}
+
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "cidadeMaravilhosa" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.85 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/cidadeMaravilhosa.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Cidade Maravilhosa"
+		composer = "André Filho"
+	}
+}
 
 \book{ %Cria um novo arquivo
 	\bookOutputName "quiNemJilo" %nome do arquivo
@@ -655,4 +712,4 @@ transpPara = g % Para instrumentos em Eb
 		title = "A Barata Diz que Tem"
 		composer = "Tradicional"
 	}
-}
+}%}
