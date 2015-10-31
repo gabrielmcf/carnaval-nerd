@@ -38,7 +38,7 @@
   \set Score.repeatCommands = #'((volta #f))
   r8. bes16 bes[ bes8 bes16 ] bes [ bes8^\markup{ \bold { D.S. a Coda } } bes16 ] d8[ d ]
   \bar "||" \break
-  d8.^\markup{ \italic Coda } [ bes d8 ] d8.[ bes d8 ]
+  \mark \markup { \fontsize #-4 \musicglyph #"scripts.coda" } d8. [ bes d8 ] d8.[ bes d8 ]
   f8. ees d8 c2
   f8. ees d8 c4. g'8
   g8. f ees8 d2

@@ -62,7 +62,7 @@
 [] %espaço depois do título
 
 
-\newcommand{\tom}{BB}
+\newcommand{\tom}{C}
 
 \begin{document}
 
@@ -82,12 +82,11 @@
 %Define estilo das páginas incluídas como PDF
 \includepdfset{pagecommand={\thispagestyle{plain}}}
 
-%Começa o livro
-\newpage
-\capitulo{RANCHOS} %Inclui novo capítulo no índice
-\input{../capas/rancho}
+\restoregeometry
+
 \musica{A Praça} %Inclui nova partitura no índice
 \includepdf{../PDF/aPraca.pdf}
+
 \musica{As Pastorinhas}
 \includepdf{../PDF/pastorinhas.pdf} %Inclui a partitura no songbook
 %\musica{Até quarta-feira}
@@ -95,22 +94,16 @@
 %\musica{Baile no Municipal}
 \musica{Bandeira Branca}
 \includepdf{../PDF/bandeiraBranca.pdf}
-\musica{Carinhoso}
-\includepdf{../PDF/carinhoso.pdf}
-%\musica{Estrela do Mar}
+
 \musica{Eu quero é botar...}
 \includepdf{../PDF/euQueroBotarMeuBloconaRua.pdf}
+
 \musica{Máscara Negra}
 \includepdf{../PDF/mascara.pdf}
 %\musica{Noite dos mascarados}
 \musica{Ô Abre Alas}
 \includepdf{../PDF/abreAlas.pdf}
 
-\capitulo{CRÁSSICAS}
-\input{../capas/crassicas}
-% \musica{A patroa me contou...}
-\musica{Allah-La Ô}
-\includepdf{../PDF/allahlao.pdf}
 \musica{Aurora}
 \includepdf{../PDF/aurora.pdf}
 % \musica{Balança o saco}
@@ -119,84 +112,56 @@
 % \musica{Bota a Camisinha}
 \musica{Cabeleira do Zezé}
 \includepdf{../PDF/cabeleiraDoZeze.pdf}
+
 \musica{Cachaça}
 \includepdf{../PDF/cachaca.pdf}
 % \musica{Caiu na rede é peixe}
 % \musica{Can Can no Carnaval}
-\musica{Chiquita Bacana}
-\includepdf{../PDF/chiquitaBacana.pdf}
-\musica{Cidade Maravilhosa}
-\includepdf{../PDF/cidadeMaravilhosa.pdf}
+
 \musica{Coração de Jacaré}
 \includepdf{../PDF/coracaoDeJacare.pdf}
 % \musica{Daqui não saio}
 % \musica{Está chegando a hora}
 \musica{Índio quer apito}
 \includepdf{../PDF/indio.pdf}
+
 \musica{A Jardineira}
 \includepdf{../PDF/jardineira.pdf}
+
 \musica{Mamãe eu Quero}
 \includepdf{../PDF/mamaeEuQuero.pdf}
+
 \musica{Marcha da Cueca}
 \includepdf{../PDF/marchaDaCueca.pdf}
 % \musica{Marcha do Cordão...}
+
 \musica{Marcha do Remador}
 \includepdf{../PDF/remador.pdf}
+
 \musica{Maria Sapatão}
 \includepdf{../PDF/mariaSapatao.pdf}
-\musica{Me Dá Um Dinheiro aí}
-\includepdf{../PDF/meDaDinheiroAi.pdf}
+
 \musica{Mulata iê, iê, iê}
 \includepdf{../PDF/mulataieieie.pdf}
 % \musica{Pegando Fogo}
 % \musica{Pescador}
-\musica{Pierrô Apaixonado}
-\includepdf{../PDF/pierroApaixonado.pdf}
-\musica{Quem Sabe, Sabe}
-\includepdf{../PDF/quemSabeSabe.pdf}
-\musica{Ressaca}
-\includepdf{../PDF/ressaca.pdf}
+
 \musica{Saca-Rolha}
 \includepdf{../PDF/sacaRolha.pdf}
+
 \musica{Sassaricando}
 \includepdf{../PDF/sassaricando.pdf}
-\musica{Taí}
-\includepdf{../PDF/tai.pdf}
-\musica{Tem Nego Bebo Ai}
-\includepdf{../PDF/temNegoBebo.pdf}
-% \musica{Tomara que chova}
-\musica{Turma do Funil}
-\includepdf{../PDF/turmaFunil.pdf}
+
 \musica{Vai com jeito}
 \includepdf{../PDF/vaiComJeito.pdf}
-\musica{Zé Pereira}
-\includepdf{../PDF/ze.pdf}
 
-\capitulo{BELLOT}
-\input{../capas/bellot}
-\musica{Jingle Tarifa Zero}
-\includepdf{../PDF/jingleTarifaZero.pdf}
-\musica{Mambo da Gameleira}
-\includepdf{../PDF/mamboGameleira.pdf}
-%\musica{Pula Catraca\\Bibi Fomfom}
-%\musica{Coxinha da Madrasta}
-%\musica{Então Brilha}
-%\musica{Filhos de Chachá}
-\musica{Mamá na Vaca}
-\includepdf{../PDF/mamaNaVaca.pdf}
-%\musica{Marcha da Alcova}
 \musica{Marcha da Praia}
 \includepdf{../PDF/praia.pdf} %Inclui a partitura no songbook
+
 \musica{Marcha do Manjericão}
 \includepdf{../PDF/manjericao.pdf}
-\musica{O Baile do Pó Royal}
-\includepdf{../PDF/poRoyal.pdf}
 
-\capitulo{AXÉ}
-\input{../capas/axe}
-%\musica{A dança do bum bum}
-\musica{A Luz de Tieta}
-\includepdf{../PDF/luzTieta.pdf}
+
 %\musica{Água Mineral}
 %\musica{Alô Paixão}
 %\musica{Baianidade Nagô}
@@ -214,14 +179,11 @@
 %\musica{Nossa gente (Avisa lá)}
 %\musica{O canto da cidade}
 %\musica{Prefixo do Verão}
-%\musica{Rapunzel}
 \musica{Requebra}
 \includepdf{../PDF/requebra.pdf}
+%\musica{Requebra }
 %\musica{Sexy Iemanjá}
 
-%\capitulo{A LAMBÁSTICA \\ARROCHERIA \\FORROBÓTICA \\FREVALÍSTICA}
-\capitulo{A LAMBÁSTICA ARROCHERIA \\FORROBÓTICA FREVALÍSTICA}
-\input{../capas/lambastica}
 \musica{Anunciação}
 \includepdf{../PDF/anunciacao.pdf}
 %\musica{La belle du jour}
@@ -232,20 +194,13 @@
 \includepdf{../PDF/quiNemJilo.pdf}
 %\musica{Fui Fiel}
 %\musica{Porque Homem não chora}
-%\musica{Chorando se Foi}
-\musica{Haja Amor}
-\includepdf{../PDF/hajaAmor.pdf}
+
 %\musica{Lindo Lago do Amor}
 %\musica{Atras do trio elétrico}
 %\musica{Banho de cheiro}
 %\musica{Bloco do Prazer}
 %\musica{Não existe pecado ao...}
-%\musica{Um frevo novo}
-%\musica{Vassourinhas}
-
-\capitulo{SAMBENHAS E PRIMOS TORTOS}
-\input{../capas/samba}
-%\musica{Saudades da Amélia}
+%\m
 \musica{Cilada}
 \includepdf{../PDF/cilada.pdf}
 %\musica{Ê baiana}
@@ -253,35 +208,13 @@
 %\musica{Recordar é viver}
 %\musica{Trem das Onze}
 %\musica{Tristeza}
-%\musica{Maracangalha}
 
-\capitulo{FUNK}
-\input{../capas/funk}
-%\musica{Beijinho no ombro}
-%\musica{Dom Dom Dom}
-%\musica{Glamurosa}
 %\musica{Morto muito louco}
 %\musica{Rap da Felicidade}
 %\musica{Rap das Armas}
 %\musica{Show das poderosas}
 
-\capitulo{AFRODITE SE QUISER}
-\input{../capas/afrodite}
-\musica{Besame Mucho}
-\includepdf{../PDF/besame.pdf}
-%\musica{Emoções}
-%\musica{Quizas}
-%\musica{Garçon}
 
-\capitulo{SLOW MOTION}
-\input{../capas/slow}
-\musica{Assim falou zaratrusta}
-\includepdf{../PDF/odisseia.pdf}
-\musica{Carroça de Fogo}
-\includepdf{../PDF/carroca.pdf}
-
-\capitulo{CHAMA O SÍNDICO}
-\input{../capas/sindico}
 %\musica{Acenda o farol}
 %\musica{Azul da cor do mar}
 %\musica{Batata frita}
@@ -300,25 +233,14 @@
 %\musica{Menina mulher}
 %\musica{Meus Filhos\\Que beleza}
 %\musica{Não quero dinheiro}
-\musica{País Tropical}
-\includepdf{../PDF/paTroPi.pdf}
+
 %\musica{Primavera}
 %\musica{Quem cochicha...}
 %\musica{Sossego}
 %\musica{Taj Mahal}
 %\musica{Terapêutica do grito}
 %\musica{Umbabarauma}
-%\musica{W Brasil}
-%\musica{Zumbi}
 
-\capitulo{OUTRAS}
-\input{../capas/outras}
-\musica{A barata diz que tem}
-\includepdf{../PDF/barata.pdf}
-%\musica{Cant buy me love}
-%\musica{I wanna hold your hand}
-%\musica{Lua de cristal}
-%\musica{Pedro de Lara}
 \musica{Superfantástico}
 \includepdf{../PDF/superfantastico.pdf}
 %\musica{Uma brasileira}

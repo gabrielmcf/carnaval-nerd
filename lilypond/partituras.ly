@@ -1,29 +1,48 @@
 \version "2.19.23"
 
-\paper{
-#(set-paper-size "a6landscape") %Define tamanho do papel
-%annotate-spacing = ##t %Anota os espaços na partitura
-head-separation = .8\cm %Separação do título
-top-margin = .8\cm %Margem superior
-%left-margin = .4\cm
-right-margin = .4\cm %Margem direita
-bottom-margin = .4\cm
-page-count = 1 %Limita cada partitura a 1 página (facilita na hora de dimensionar a cla ve)
-print-page-number = ##f %Não imprime número da página, isso fica por conta do LaTeX
-indent = #0 %Remove indentação antes da clave, ganha um pouco de espaço e alinha os sistemas
-#(define fonts (make-pango-font-tree "Nimbus Sans L" "Nimbus Sans L" "Nimbus Sans L" (/ staff-height pt 20)))
+\include "blocoderua.ily"
+
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "euQueroBotarMeuBloconaRua" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.7 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/euQueroBotarMeuBloconaRua.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}\header{ %Cabeçalho da partitura, contém nome e autor
+	  title = "Eu Quero É Botar Meu Bloco Na Rua"
+	  composer = "Sérgio Sampaio"
+	  dedication = "1972"
+	}
 }
 
-\header{
-piece = \markup { \bold \magnify #1 { Bb }  } %Aparece à esquerda de todas as partituras
-tagline = \markup { \magnify #.5 { "Faça amor, seja amor!" } } %Rodapé de todas as partituras
+\book{ %Cria um novo arquivo
+	\bookOutputName "superfantastico" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.8 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/superfantastico.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Superfantástico"
+		composer = "Ignacio Ballesteros e Difelisatti, Adpt. Edgard Poças"
+		dedication = "1983"
+	}
 }
 
-%Definem a transposição
-transpDe = c
-%transpPara = g % Para instrumentos em Eb
-%transpPara = g % Para instrumentos em C
-transpPara = c % Para instrumentos em Bb
+\book{ %Cria um novo arquivo
+	\bookOutputName "cilada" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.9 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/cilada.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Cilada"
+		composer = "Délcio Luiz e Ronaldo Barcellos"
+		dedication = "1985"
+	}
+}
 
 
 \book{ %Cria um novo arquivo
@@ -36,11 +55,9 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Requebra"
 		composer = "Pierre Onassis e Nego"
+		dedication = "1993"
 	}
 }
-
-
-%{
 
 \book{ %Cria um novo arquivo
 	\bookOutputName "noiteMascarados" %nome do arquivo
@@ -52,6 +69,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Noite dos Mascarados"
 		composer = "Chico Buarque"
+		dedication = "1967"
 	}
 }
 
@@ -65,6 +83,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Me Dá Um Dinheiro Ai"
 		composer = \markup { \tiny "Ivan Ferreira / Homero Ferreira / Glauco Ferreira" }
+		dedication = "1959"
 	}
 }
 
@@ -79,6 +98,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Cidade Maravilhosa"
 		composer = "André Filho"
+		dedication = "1934"
 	}
 }
 
@@ -92,6 +112,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Qui Nem Jiló"
 		composer = "Luiz Gonzaga e Humberto Teixeira"
+		dedication = "1941"
 	}
 }
 
@@ -105,6 +126,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Anunciação"
 		composer = "Alceu Valença"
+		dedication = "1983"
 	}
 }
 
@@ -118,6 +140,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Tem Nego Bebo Ai"
 		composer = "Mirabeau e Airton Amorim"
+		dedication = "1955"
 	}
 }
 
@@ -131,6 +154,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Saca-Rolha"
 		composer = "Zé da Zilda, Zilda do Zé e Waldir Machado"
+		dedication = "1954"
 	}
 }
 
@@ -146,6 +170,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Ressaca"
 		composer = "Zé da Zilda e Zilda do Zé"
+		dedication = "1954"
 	}
 }
 
@@ -159,6 +184,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Mulata iê, ie, iê"
 		composer = "João Roberto Kelly"
+		dedication = "1964"
 	}
 }
 
@@ -173,34 +199,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Maria Sapatão"
 		composer = \markup { \teeny "João Roberto Kelly / Dom Carlos / Abelardo Barbosa \"Chacrinha\" / Leleco Barbosa" }
-	}
-}
-
-%Para acrescentar uma nova partitura no songbook crie um novo ambiente \book seguindo este padrão
-\book{ %Cria um novo arquivo
-	\bookOutputName "bandeiraBranca" %nome do arquivo
-	\score{ %Cria nova clave
-		\new Staff \with { \magnifyStaff #.9 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
-			\transpose \transpDe \transpPara { \include "../Partituras/bandeiraBranca.ily" } %Inclui o arquivo com as notas e define a transposição
-		}
-	}
-	\header{ %Cabeçalho da partitura, contém nome e autor
-		title = "Bandeira Branca"
-		composer = "Chiquinha Gonzaga"
-	}
-}
-
-
-\book{ %Cria um novo arquivo
-	\bookOutputName "aPraca" %nome do arquivo
-	\score{ %Cria nova clave
-		\new Staff \with { \magnifyStaff #.8 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
-			\transpose \transpDe \transpPara { \include "../Partituras/aPraca.ily" } %Inclui o arquivo com as notas e define a transposição
-		}
-	}
-	\header{ %Cabeçalho da partitura, contém nome e autor
-		title = "A Praça"
-		composer = "Carlos Imperial"
+		dedication = "1981"
 	}
 }
 
@@ -215,6 +214,37 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Bandeira Branca"
 		composer = "Max Nunes e Laércio Alves"
+		dedication = "1969"
+	}
+}
+
+
+\book{ %Cria um novo arquivo
+	\bookOutputName "aPraca" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.8 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/aPraca.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "A Praça"
+		composer = "Carlos Imperial"
+		dedication = "1967"
+	}
+}
+
+%Para acrescentar uma nova partitura no songbook crie um novo ambiente \book seguindo este padrão
+\book{ %Cria um novo arquivo
+	\bookOutputName "bandeiraBranca" %nome do arquivo
+	\score{ %Cria nova clave
+		\new Staff \with { \magnifyStaff #.9 }{	%Dimensiona a clave para caber na página, tem que ser feito pra cada um das partituras
+			\transpose \transpDe \transpPara { \include "../Partituras/bandeiraBranca.ily" } %Inclui o arquivo com as notas e define a transposição
+		}
+	}
+	\header{ %Cabeçalho da partitura, contém nome e autor
+		title = "Bandeira Branca"
+		composer = "Max Nunes e Laércio Alves"
+		dedication = "1964"
 	}
 }
 
@@ -228,19 +258,21 @@ transpPara = c % Para instrumentos em Bb
 	\header{
 		title = "As Pastorinhas"
 		composer = "Noel Rosa e Braguinha"
+		dedication = "1938"
 	}
 }
 
 \book{
 	\bookOutputName "mascara"
 	\score{
-		\new Staff \with { \magnifyStaff #.7 }{
+		\new Staff \with { \magnifyStaff #.65 }{
 			\transpose \transpDe \transpPara { \include "../Partituras/mascara.ily" }
 		}
 	}
 	\header{
 		title = "Máscara Negra"
 		composer = "Zé Keti e Pereira Matos"
+		dedication = "1966"
 	}
 }
 
@@ -254,6 +286,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Balancê"
 		composer = "Braguinha e Alberto Ribeiro"
+		dedication = "1937"
 	}
 }
 
@@ -267,6 +300,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Cabeleira do Zezé"
 		composer = "Roberto Faissal e João Roberto Kelly"
+		dedication = "1963"
 	}
 }
 
@@ -280,6 +314,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Cachaça"
 		composer = \markup { \tiny "Lúcio de Castro / Heber Lobato / Marinósio Filho / Mirabeau" }
+		dedication = "1953"
 	}
 }
 
@@ -293,6 +328,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Coração de Jacaré"
 		composer = "J. Nunes e Dom Jorge"
+		dedication = "1969"
 	}
 }
 
@@ -306,6 +342,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Índio Quer Apito"
 		composer = "Haroldo Lobo e Milton de Oliveira"
+		dedication = "1960"
 	}
 }
 
@@ -319,6 +356,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Mamãe eu Quero"
 		composer = "Jararaca e Vicente Paiva"
+		dedication = "1937"
 	}
 }
 
@@ -332,6 +370,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = \markup { \override #'(font-family . sans) {A Jardineira} }
 		composer = "Benedito Lacerda e Humberto Porto"
+		dedication = "1938"
 	}
 }
 
@@ -345,6 +384,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Maria Sapatão"
 		composer = \markup { \fontsize #-4 "João Roberto Kelly / Dom Carlos / Abelardo Barbosa \"Chacrinha\" / Leleco Barbosa" }
+		dedication = "1981"
 	}
 }
 
@@ -358,6 +398,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Aurora"
 		composer = "Mário Lago e Roberto Roberti"
+		dedication = "1940"
 	}
 }
 
@@ -371,6 +412,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Marcha da Cueca"
 		composer = "Mendes / Prestes / Sardinha"
+		dedication = "1971"
 	}
 }
 
@@ -384,6 +426,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Allah-La Ô"
 		composer = "Haroldo Lobo e Antônio Nássara"
+		dedication = "1939"
 	}
 }
 
@@ -397,6 +440,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Ô Abre Alas"
 		composer = "Chiquinha Gonzaga"
+		dedication = "1911"
 	}
 }
 
@@ -410,6 +454,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Marcha do Remador"
 		composer = "Antônio Almeida e Oldemar Magalhães"
+		dedication = "1963"
 	}
 }
 
@@ -423,6 +468,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Pierrô Apaixonado"
 		composer = "Noel Rosa e Heitor dos Prazeres"
+		dedication = "1936"
 	}
 }
 
@@ -436,6 +482,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Quem Sabe, Sabe"
 		composer = "Joel de Almeida e Carvalhinho"
+		dedication = "1956"
 	}
 }
 
@@ -450,6 +497,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Vai Com Jeito"
 		composer = "Braguinha"
+		dedication = "1957"
 	}
 }
 
@@ -463,6 +511,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Taí"
 		composer = "Joubert de Carvalho"
+		dedication = "1930"
 	}
 }
 
@@ -476,6 +525,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Zé Pereira"
 		composer = "Tradicional"
+		dedication = "1917"
 	}
 }
 
@@ -489,6 +539,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{
 		title = "Marcha da Praia"
 		composer = "Omar Motta"
+		dedication = "2011"
 	}
 }
 
@@ -502,6 +553,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{
 		title = "Marcha do Manjericão"
 		composer = "Bloco do Manjericão"
+		dedication = "2011"
 	}
 }
 
@@ -528,6 +580,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{
 		title = "Carinhoso"
 		composer = "Pixinguinha e Braguinha"
+		dedication = "1928"
 	}
 }
 
@@ -541,6 +594,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Chiquita Bacana"
 		composer = "Braguinha e Alberto Ribeiro"
+		dedication = "1949"
 	}
 }
 
@@ -554,6 +608,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Turma do Funil"
 		composer = "Mirabeau/Milton de Oliveira/Urgel de Castro"
+		dedication = "1955"
 	}
 }
 
@@ -567,6 +622,7 @@ transpPara = c % Para instrumentos em Bb
 	\header{ %Cabeçalho da partitura, contém nome e autor
 		title = "Sassaricando"
 		composer = "Luis Antônio/Jota Júnior/Oldemar Magalhães"
+		dedication = "1951"
 	}
 }
 
@@ -712,4 +768,4 @@ transpPara = c % Para instrumentos em Bb
 		title = "A Barata Diz que Tem"
 		composer = "Tradicional"
 	}
-}%}
+}
